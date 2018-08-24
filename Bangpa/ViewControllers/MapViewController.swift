@@ -17,6 +17,7 @@ class MapViewController: UIViewController {
     let searchController = UISearchController(searchResultsController: nil)
     
     private var searchResults: [MapSearchResult] = []
+    private var pickedPlace: MapSearchResult?
     
     static func initFromStoryboard() -> UINavigationController {
         let storyboard = UIStoryboard(name: MapViewController.reusableIdentifier, bundle: nil)
@@ -32,10 +33,8 @@ class MapViewController: UIViewController {
         setupTableView()
     }
     
-    
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
-        
         mapVCPresenter.disableLocationUpdate()
     }
     
@@ -80,7 +79,6 @@ class MapViewController: UIViewController {
         if (error == nil) { // success
             // set map center and level
             mapView.setMapCenter(NGeoPoint(longitude:126.978371, latitude:37.5666091), atLevel:11)
-            
             // set for retina display
             mapView.setMapEnlarged(true, mapHD: true)
         } else { // fail
@@ -146,6 +144,10 @@ extension MapViewController: UISearchBarDelegate {
     }
     
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        if searchText.count == 0 {
+            self.searchResults = []
+            self.searchResultTableView.reloadData()
+        }
         searchResultTableView.isHidden = false
         APIService.shard.fetchResult(from: searchText) { (results) in
             self.searchResults = results
@@ -155,7 +157,49 @@ extension MapViewController: UISearchBarDelegate {
 }
 
 extension MapViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+        tableView.isHidden = true
+        searchController.dismiss(animated: true) {
+            self.clearOverlays()
+            let picked = self.searchResults[indexPath.row]
+            let point = picked.tmiGeoPoint
+            self.mapView.setMapCenter(NGeoPoint(longitude:point.x, latitude:point.y), atLevel:11)
+            self.mapView.setMapEnlarged(true, mapHD: true)
+            self.addMarker(x: point.x, y: point.y)
+        }
+    }
     
+    fileprivate func addMarker(x: Double, y: Double) {
+        if let mapOverlayManager = mapView?.mapOverlayManager {
+            // create POI data overlay
+            if let poiDataOverlay = mapOverlayManager.newPOIdataOverlay() {
+                poiDataOverlay.initPOIdata(1)
+                
+                let poiItem = poiDataOverlay.addPOIitem(atLocation: NGeoPoint(longitude: x, latitude: y), title: "Touch & Drag to Move", type: UserPOIflagTypeDefault, iconIndex: 0, with: nil)
+                
+                // set floating mode
+                poiItem?.setPOIflagMode(.fixed)
+                
+                // hide right button on callout
+                poiItem?.hasRightCalloutAccessory = false
+                
+                poiDataOverlay.endPOIdata()
+                
+                // select item
+                poiDataOverlay.selectPOIitem(at: 0, moveToCenter: true)
+                // show all POI data
+
+                poiDataOverlay.showAllPOIdata()
+            }
+        }
+    }
+    
+    func clearOverlays() {
+        if let mapOverlayManager = mapView?.mapOverlayManager {
+            mapOverlayManager.clearOverlays()
+        }
+    }
 }
 
 extension MapViewController: UITableViewDataSource {
