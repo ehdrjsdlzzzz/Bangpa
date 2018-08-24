@@ -10,9 +10,13 @@ import UIKit
 
 class MapViewController: UIViewController {
     
+    @IBOutlet weak var searchResultTableView: UITableView!
     private var mapView: NMapView!
     private var mapVCPresenter = MapVCPresenter(with: NMapLocationManager.getSharedInstance())
     @IBOutlet weak var changeStateButton: UIButton!
+    let searchController = UISearchController(searchResultsController: nil)
+    
+    private var searchResults: [MapSearchResult] = []
     
     static func initFromStoryboard() -> UINavigationController {
         let storyboard = UIStoryboard(name: MapViewController.reusableIdentifier, bundle: nil)
@@ -24,12 +28,10 @@ class MapViewController: UIViewController {
         super.viewDidLoad()
         mapVCPresenter.attachView(vc: self)
         setupMapView()
+        setupSearchBar()
+        setupTableView()
     }
     
-    override func viewDidLayoutSubviews() {
-        super.viewDidLayoutSubviews()
-        self.navigationController?.navigationBar.setGradientBackground(colors: [UIColor.gradientStartBlue, UIColor.gradientEndBlue])
-    }
     
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
@@ -43,6 +45,19 @@ class MapViewController: UIViewController {
     
     @IBAction func buttonClicked(_ sender: UIButton) {
         mapVCPresenter.setupState()
+    }
+    
+    fileprivate func setupTableView(){
+        searchResultTableView.delegate = self
+        searchResultTableView.dataSource = self
+        view.bringSubview(toFront: searchResultTableView)
+    }
+    
+    fileprivate func setupSearchBar(){
+        searchController.dimsBackgroundDuringPresentation = false
+        searchController.searchBar.delegate = self
+        self.navigationItem.searchController = searchController
+        self.navigationItem.hidesSearchBarWhenScrolling = false
     }
     
     fileprivate func setupMapView() {
@@ -121,5 +136,37 @@ extension MapViewController: MapViewProtocol {
         if let mapView = mapView, mapView.isAutoRotateEnabled {
             mapView.setAutoRotateEnabled(false, animate: true)
         }
+    }
+}
+
+extension MapViewController: UISearchBarDelegate {
+    
+    func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
+        searchResultTableView.isHidden = true
+    }
+    
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        searchResultTableView.isHidden = false
+        APIService.shard.fetchResult(from: searchText) { (results) in
+            self.searchResults = results
+            self.searchResultTableView.reloadData()
+        }
+    }
+}
+
+extension MapViewController: UITableViewDelegate {
+    
+}
+
+extension MapViewController: UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return searchResults.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "resultcell", for: indexPath)
+        cell.textLabel?.text = searchResults[indexPath.row].presentableTitle
+        cell.detailTextLabel?.text =  searchResults[indexPath.row].telephone
+        return cell
     }
 }
