@@ -21,7 +21,6 @@ struct APIService {
                 "X-Naver-Client-Secret": "IBJVrbXylh"
             ]
             DispatchQueue.global().async {
-                
                 UIApplication.shared.isNetworkActivityIndicatorVisible = true
                 Alamofire.request(encodedURL, method: .get, parameters: nil, encoding: JSONEncoding.default, headers: headers).responseJSON { (response) in
                     guard let result = response.data else { return }
