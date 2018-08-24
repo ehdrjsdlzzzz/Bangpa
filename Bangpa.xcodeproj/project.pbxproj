@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		3E04E813212C601700F7EA41 /* MapVCPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E04E812212C601700F7EA41 /* MapVCPresenter.swift */; };
+		3E0E9B1721301EF700B3956F /* MapSearchResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E0E9B1621301EF700B3956F /* MapSearchResult.swift */; };
+		3E0E9B1A21301FF200B3956F /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E0E9B1921301FF200B3956F /* APIService.swift */; };
+		3E0E9B1E21303C6500B3956F /* GeoTransitionService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E0E9B1D21303C6500B3956F /* GeoTransitionService.swift */; };
 		3E5533B92129C76000288AEE /* ApiGatewayMac.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E5533B82129C76000288AEE /* ApiGatewayMac.framework */; };
 		3E5533BA2129C76000288AEE /* ApiGatewayMac.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 3E5533B82129C76000288AEE /* ApiGatewayMac.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		3E5533BC2129C77A00288AEE /* NMapViewerSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E5533BB2129C77A00288AEE /* NMapViewerSDK.framework */; };
@@ -55,6 +58,9 @@
 
 /* Begin PBXFileReference section */
 		3E04E812212C601700F7EA41 /* MapVCPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapVCPresenter.swift; sourceTree = "<group>"; };
+		3E0E9B1621301EF700B3956F /* MapSearchResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapSearchResult.swift; sourceTree = "<group>"; };
+		3E0E9B1921301FF200B3956F /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
+		3E0E9B1D21303C6500B3956F /* GeoTransitionService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeoTransitionService.swift; sourceTree = "<group>"; };
 		3E5533B82129C76000288AEE /* ApiGatewayMac.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ApiGatewayMac.framework; sourceTree = "<group>"; };
 		3E5533BB2129C77A00288AEE /* NMapViewerSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NMapViewerSDK.framework; path = "../../../Downloads/maps.ios-master/Frameworks/NMapViewerSDK.framework"; sourceTree = "<group>"; };
 		3E5533BE212A4F0000288AEE /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
@@ -113,11 +119,21 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
-		3EC4FBBE212971A700E19A54 /* Views */ = {
+		3E0E9B1521301EE400B3956F /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				3E0E9B1621301EF700B3956F /* MapSearchResult.swift */,
 			);
-			path = Views;
+			path = Model;
+			sourceTree = "<group>";
+		};
+		3E0E9B1821301FD700B3956F /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				3E0E9B1921301FF200B3956F /* APIService.swift */,
+				3E0E9B1D21303C6500B3956F /* GeoTransitionService.swift */,
+			);
+			path = Service;
 			sourceTree = "<group>";
 		};
 		3EC4FBC4212984CA00E19A54 /* MainViewController */ = {
@@ -162,8 +178,9 @@
 		3ED5CDBD211088C200E8DF6B /* Bangpa */ = {
 			isa = PBXGroup;
 			children = (
+				3E0E9B1821301FD700B3956F /* Service */,
+				3E0E9B1521301EE400B3956F /* Model */,
 				3EC4FBE1212A5D3700E19A54 /* Resources */,
-				3EC4FBBE212971A700E19A54 /* Views */,
 				3ED5CDFC2110AE9A00E8DF6B /* Cells */,
 				3ED5CDF92110AB8700E8DF6B /* Extensions */,
 				3ED5CDF62110A1C000E8DF6B /* Presenters */,
@@ -376,14 +393,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				3EC4FBC92129880A00E19A54 /* SectionDescriptionTableViewCell.swift in Sources */,
+				3E0E9B1A21301FF200B3956F /* APIService.swift in Sources */,
 				3ED5CE002110AFAB00E8DF6B /* MainPromotionTableViewCell.swift in Sources */,
 				3EC4FBCC212990D800E19A54 /* StudyGroupTableViewCell.swift in Sources */,
 				3ED5CDF82110A1E100E8DF6B /* MainVCPresenter.swift in Sources */,
 				3EC4FBE3212A5D5100E19A54 /* NMapViewResources.swift in Sources */,
 				3ED5CDF421109C2B00E8DF6B /* MyPageViewController.swift in Sources */,
 				3ED5CDBF211088C200E8DF6B /* AppDelegate.swift in Sources */,
+				3E0E9B1E21303C6500B3956F /* GeoTransitionService.swift in Sources */,
 				3ED5CDEC21109BD500E8DF6B /* SearchStudyRoomViewController.swift in Sources */,
 				3ED5CDEE21109BFD00E8DF6B /* SearchStudyGroupViewController.swift in Sources */,
+				3E0E9B1721301EF700B3956F /* MapSearchResult.swift in Sources */,
 				3ED5CDFB2110ABA100E8DF6B /* ThemeColor.swift in Sources */,
 				3ED5CDFE2110AEDD00E8DF6B /* MainPromotionCollectionViewCell.swift in Sources */,
 				3E04E813212C601700F7EA41 /* MapVCPresenter.swift in Sources */,

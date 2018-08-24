@@ -25,17 +25,51 @@
                                     <action selector="buttonClicked:" destination="H5k-9V-blh" eventType="touchUpInside" id="V2j-3p-fHr"/>
                                 </connections>
                             </button>
+                            <tableView hidden="YES" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="FZG-Ys-Pvc">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="resultcell" textLabel="aoz-GP-cWT" detailTextLabel="mb6-1A-BsX" style="IBUITableViewCellStyleSubtitle" id="yb3-XQ-6o3">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="yb3-XQ-6o3" id="vKL-x0-H5s">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="aoz-GP-cWT">
+                                                    <rect key="frame" x="15" y="5" width="33.5" height="20.5"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Detail" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="mb6-1A-BsX">
+                                                    <rect key="frame" x="15" y="25.5" width="33" height="14.5"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="HVR-ej-XJt" firstAttribute="bottom" secondItem="lkZ-xv-ZM8" secondAttribute="bottom" constant="16" id="6Ge-B4-u0D"/>
                             <constraint firstItem="HVR-ej-XJt" firstAttribute="trailing" secondItem="lkZ-xv-ZM8" secondAttribute="trailing" constant="16" id="DGn-Xk-At1"/>
+                            <constraint firstItem="FZG-Ys-Pvc" firstAttribute="leading" secondItem="HVR-ej-XJt" secondAttribute="leading" id="YfC-YV-rfN"/>
+                            <constraint firstItem="FZG-Ys-Pvc" firstAttribute="top" secondItem="HVR-ej-XJt" secondAttribute="top" id="a4g-jS-Pu6"/>
+                            <constraint firstItem="HVR-ej-XJt" firstAttribute="trailing" secondItem="FZG-Ys-Pvc" secondAttribute="trailing" id="tDm-S1-zfc"/>
+                            <constraint firstItem="HVR-ej-XJt" firstAttribute="bottom" secondItem="FZG-Ys-Pvc" secondAttribute="bottom" id="wxk-L6-w4X"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="HVR-ej-XJt"/>
                     </view>
                     <navigationItem key="navigationItem" title="Searh" id="75o-Gm-5ub">
                         <barButtonItem key="rightBarButtonItem" title="완료" id="O3T-Nt-8MV">
-                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <color key="tintColor" red="0.066666666669999999" green="0.38823529410000002" blue="0.98431372549999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <connections>
                                 <action selector="searchCompleteButtonDidTapped:" destination="H5k-9V-blh" id="R3P-fM-11P"/>
                             </connections>
@@ -43,6 +77,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="changeStateButton" destination="lkZ-xv-ZM8" id="MOy-GL-5Gl"/>
+                        <outlet property="searchResultTableView" destination="FZG-Ys-Pvc" id="56K-Ub-s4G"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wey-FD-tNp" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -59,7 +94,7 @@
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <textAttributes key="titleTextAttributes">
-                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <color key="textColor" red="0.066666666669999999" green="0.38823529410000002" blue="0.98431372549999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
