@@ -44,7 +44,7 @@ class SearchStudyGroupViewController: UIViewController, UITableViewDataSource, U
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell: RecruitPostTableViewCell = tableView.dequeueReusableCell(withIdentifier: self.postCellIdentifier, for: indexPath) as! RecruitPostTableViewCell
+        let cell = UITableViewCell()
         
         return cell
     }

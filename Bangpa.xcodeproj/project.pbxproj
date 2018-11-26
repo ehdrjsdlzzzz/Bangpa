@@ -8,11 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		3E04E813212C601700F7EA41 /* MapVCPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E04E812212C601700F7EA41 /* MapVCPresenter.swift */; };
-		3E5533B92129C76000288AEE /* ApiGatewayMac.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E5533B82129C76000288AEE /* ApiGatewayMac.framework */; };
-		3E5533BA2129C76000288AEE /* ApiGatewayMac.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 3E5533B82129C76000288AEE /* ApiGatewayMac.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		3E5533BC2129C77A00288AEE /* NMapViewerSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E5533BB2129C77A00288AEE /* NMapViewerSDK.framework */; };
+		3E0E9B1721301EF700B3956F /* MapSearchResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E0E9B1621301EF700B3956F /* MapSearchResult.swift */; };
+		3E0E9B1A21301FF200B3956F /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E0E9B1921301FF200B3956F /* APIService.swift */; };
+		3E0E9B1E21303C6500B3956F /* GeoTransitionService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E0E9B1D21303C6500B3956F /* GeoTransitionService.swift */; };
 		3E5533BF212A4F0000288AEE /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E5533BE212A4F0000288AEE /* MapViewController.swift */; };
 		3E5533C1212A4F0900288AEE /* MapViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3E5533C0212A4F0900288AEE /* MapViewController.storyboard */; };
+		3E91413921ABF9E700746E43 /* ApiGatewayMac.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E91413821ABF9E700746E43 /* ApiGatewayMac.framework */; };
+		3E91413A21ABF9E700746E43 /* ApiGatewayMac.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 3E91413821ABF9E700746E43 /* ApiGatewayMac.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		3E91413D21ABF9F000746E43 /* NMapViewerSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E91413C21ABF9F000746E43 /* NMapViewerSDK.framework */; };
 		3EC4FBC92129880A00E19A54 /* SectionDescriptionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EC4FBC72129880A00E19A54 /* SectionDescriptionTableViewCell.swift */; };
 		3EC4FBCA2129880A00E19A54 /* SectionDescriptionTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3EC4FBC82129880A00E19A54 /* SectionDescriptionTableViewCell.xib */; };
 		3EC4FBCC212990D800E19A54 /* StudyGroupTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EC4FBCB212990D800E19A54 /* StudyGroupTableViewCell.swift */; };
@@ -36,17 +39,17 @@
 		3ED5CE002110AFAB00E8DF6B /* MainPromotionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ED5CDFF2110AFAB00E8DF6B /* MainPromotionTableViewCell.swift */; };
 		3ED5CE022110B08800E8DF6B /* ReusableIdentifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ED5CE012110B08800E8DF6B /* ReusableIdentifier.swift */; };
 		3ED5CE042110B78E00E8DF6B /* MainViewAdvertisementCollectionViewPersenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ED5CE032110B78E00E8DF6B /* MainViewAdvertisementCollectionViewPersenter.swift */; };
-		AF9D39D1F3A7B0FD41E2B7ED /* Pods_Bangpa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D216BB7C8E61F57C1758E4B /* Pods_Bangpa.framework */; };
+		72BC6A1E213FC477BB74CD27 /* Pods_Bangpa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AEA4EF4C5736A0772F7E80C5 /* Pods_Bangpa.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		3EC4FBDD2129C18B00E19A54 /* Embed Frameworks */ = {
+		3E91413B21ABF9E700746E43 /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				3E5533BA2129C76000288AEE /* ApiGatewayMac.framework in Embed Frameworks */,
+				3E91413A21ABF9E700746E43 /* ApiGatewayMac.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -55,10 +58,13 @@
 
 /* Begin PBXFileReference section */
 		3E04E812212C601700F7EA41 /* MapVCPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapVCPresenter.swift; sourceTree = "<group>"; };
-		3E5533B82129C76000288AEE /* ApiGatewayMac.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ApiGatewayMac.framework; sourceTree = "<group>"; };
-		3E5533BB2129C77A00288AEE /* NMapViewerSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NMapViewerSDK.framework; path = "../../../Downloads/maps.ios-master/Frameworks/NMapViewerSDK.framework"; sourceTree = "<group>"; };
+		3E0E9B1621301EF700B3956F /* MapSearchResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapSearchResult.swift; sourceTree = "<group>"; };
+		3E0E9B1921301FF200B3956F /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
+		3E0E9B1D21303C6500B3956F /* GeoTransitionService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeoTransitionService.swift; sourceTree = "<group>"; };
 		3E5533BE212A4F0000288AEE /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		3E5533C0212A4F0900288AEE /* MapViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MapViewController.storyboard; sourceTree = "<group>"; };
+		3E91413821ABF9E700746E43 /* ApiGatewayMac.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ApiGatewayMac.framework; path = Frameworks/ApiGatewayMac.framework; sourceTree = "<group>"; };
+		3E91413C21ABF9F000746E43 /* NMapViewerSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NMapViewerSDK.framework; path = Frameworks/NMapViewerSDK.framework; sourceTree = "<group>"; };
 		3EC4FBC72129880A00E19A54 /* SectionDescriptionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionDescriptionTableViewCell.swift; sourceTree = "<group>"; };
 		3EC4FBC82129880A00E19A54 /* SectionDescriptionTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SectionDescriptionTableViewCell.xib; sourceTree = "<group>"; };
 		3EC4FBCB212990D800E19A54 /* StudyGroupTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudyGroupTableViewCell.swift; sourceTree = "<group>"; };
@@ -85,7 +91,7 @@
 		3ED5CDFF2110AFAB00E8DF6B /* MainPromotionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPromotionTableViewCell.swift; sourceTree = "<group>"; };
 		3ED5CE012110B08800E8DF6B /* ReusableIdentifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReusableIdentifier.swift; sourceTree = "<group>"; };
 		3ED5CE032110B78E00E8DF6B /* MainViewAdvertisementCollectionViewPersenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewAdvertisementCollectionViewPersenter.swift; sourceTree = "<group>"; };
-		6D216BB7C8E61F57C1758E4B /* Pods_Bangpa.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Bangpa.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AEA4EF4C5736A0772F7E80C5 /* Pods_Bangpa.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Bangpa.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B4A77653603DB72FE9FEA2C2 /* Pods-Bangpa.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bangpa.release.xcconfig"; path = "Pods/Target Support Files/Pods-Bangpa/Pods-Bangpa.release.xcconfig"; sourceTree = "<group>"; };
 		F133BDE31E2615661711FE71 /* Pods-Bangpa.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bangpa.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Bangpa/Pods-Bangpa.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -95,9 +101,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3E5533BC2129C77A00288AEE /* NMapViewerSDK.framework in Frameworks */,
-				3E5533B92129C76000288AEE /* ApiGatewayMac.framework in Frameworks */,
-				AF9D39D1F3A7B0FD41E2B7ED /* Pods_Bangpa.framework in Frameworks */,
+				3E91413D21ABF9F000746E43 /* NMapViewerSDK.framework in Frameworks */,
+				3E91413921ABF9E700746E43 /* ApiGatewayMac.framework in Frameworks */,
+				72BC6A1E213FC477BB74CD27 /* Pods_Bangpa.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -113,11 +119,21 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
-		3EC4FBBE212971A700E19A54 /* Views */ = {
+		3E0E9B1521301EE400B3956F /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				3E0E9B1621301EF700B3956F /* MapSearchResult.swift */,
 			);
-			path = Views;
+			path = Model;
+			sourceTree = "<group>";
+		};
+		3E0E9B1821301FD700B3956F /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				3E0E9B1921301FF200B3956F /* APIService.swift */,
+				3E0E9B1D21303C6500B3956F /* GeoTransitionService.swift */,
+			);
+			path = Service;
 			sourceTree = "<group>";
 		};
 		3EC4FBC4212984CA00E19A54 /* MainViewController */ = {
@@ -143,7 +159,7 @@
 		3ED5CDB2211088C200E8DF6B = {
 			isa = PBXGroup;
 			children = (
-				3E5533B82129C76000288AEE /* ApiGatewayMac.framework */,
+				3E91413821ABF9E700746E43 /* ApiGatewayMac.framework */,
 				3ED5CDBD211088C200E8DF6B /* Bangpa */,
 				3ED5CDBC211088C200E8DF6B /* Products */,
 				25E8EC4EBA501131CB31A7D5 /* Pods */,
@@ -162,8 +178,9 @@
 		3ED5CDBD211088C200E8DF6B /* Bangpa */ = {
 			isa = PBXGroup;
 			children = (
+				3E0E9B1821301FD700B3956F /* Service */,
+				3E0E9B1521301EE400B3956F /* Model */,
 				3EC4FBE1212A5D3700E19A54 /* Resources */,
-				3EC4FBBE212971A700E19A54 /* Views */,
 				3ED5CDFC2110AE9A00E8DF6B /* Cells */,
 				3ED5CDF92110AB8700E8DF6B /* Extensions */,
 				3ED5CDF62110A1C000E8DF6B /* Presenters */,
@@ -234,8 +251,8 @@
 		FFA40D263ABA83B3E83AB0A5 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				3E5533BB2129C77A00288AEE /* NMapViewerSDK.framework */,
-				6D216BB7C8E61F57C1758E4B /* Pods_Bangpa.framework */,
+				3E91413C21ABF9F000746E43 /* NMapViewerSDK.framework */,
+				AEA4EF4C5736A0772F7E80C5 /* Pods_Bangpa.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -252,8 +269,8 @@
 				3ED5CDB8211088C200E8DF6B /* Frameworks */,
 				3ED5CDB9211088C200E8DF6B /* Resources */,
 				B5EC4E6BF9834B126B699241 /* [CP] Embed Pods Frameworks */,
-				3EC4FBDD2129C18B00E19A54 /* Embed Frameworks */,
 				3E5533BD2129C87900288AEE /* ShellScript */,
+				3E91413B21ABF9E700746E43 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -276,6 +293,7 @@
 				TargetAttributes = {
 					3ED5CDBA211088C200E8DF6B = {
 						CreatedOnToolsVersion = 9.4.1;
+						LastSwiftMigration = 1010;
 					};
 				};
 			};
@@ -328,7 +346,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "/Users/dongkun/Downloads/maps.ios-master/Scripts/strip-frameworks.sh";
+			shellScript = "${PROJECT_DIR}/Frameworks/strip-frameworks.sh\n";
 		};
 		B5EC4E6BF9834B126B699241 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -376,14 +394,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				3EC4FBC92129880A00E19A54 /* SectionDescriptionTableViewCell.swift in Sources */,
+				3E0E9B1A21301FF200B3956F /* APIService.swift in Sources */,
 				3ED5CE002110AFAB00E8DF6B /* MainPromotionTableViewCell.swift in Sources */,
 				3EC4FBCC212990D800E19A54 /* StudyGroupTableViewCell.swift in Sources */,
 				3ED5CDF82110A1E100E8DF6B /* MainVCPresenter.swift in Sources */,
 				3EC4FBE3212A5D5100E19A54 /* NMapViewResources.swift in Sources */,
 				3ED5CDF421109C2B00E8DF6B /* MyPageViewController.swift in Sources */,
 				3ED5CDBF211088C200E8DF6B /* AppDelegate.swift in Sources */,
+				3E0E9B1E21303C6500B3956F /* GeoTransitionService.swift in Sources */,
 				3ED5CDEC21109BD500E8DF6B /* SearchStudyRoomViewController.swift in Sources */,
 				3ED5CDEE21109BFD00E8DF6B /* SearchStudyGroupViewController.swift in Sources */,
+				3E0E9B1721301EF700B3956F /* MapSearchResult.swift in Sources */,
 				3ED5CDFB2110ABA100E8DF6B /* ThemeColor.swift in Sources */,
 				3ED5CDFE2110AEDD00E8DF6B /* MainPromotionCollectionViewCell.swift in Sources */,
 				3E04E813212C601700F7EA41 /* MapVCPresenter.swift in Sources */,
@@ -541,7 +562,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
-					"\"$(SRCROOT)/../../../Downloads/maps.ios-master/Frameworks\"",
+					"$(PROJECT_DIR)/Frameworks",
 				);
 				INFOPLIST_FILE = Bangpa/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
@@ -561,7 +582,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.adhoc.Bangpa;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "/Users/dongkun/Programming/ADHOC/Bangpa/Bangpa/Bangpa-Bridging-Header.h";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
@@ -576,6 +597,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/Frameworks",
 				);
 				INFOPLIST_FILE = Bangpa/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
@@ -595,7 +617,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.adhoc.Bangpa;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "/Users/dongkun/Programming/ADHOC/Bangpa/Bangpa/Bangpa-Bridging-Header.h";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
