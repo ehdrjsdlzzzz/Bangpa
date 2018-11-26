@@ -7,30 +7,40 @@
 //
 
 import UIKit
+import Firebase
+import GoogleSignIn
 
 class MyPageViewController: UIViewController {
-
+    
+    @IBOutlet weak var googleSignInButton: GIDSignInButton! {
+        didSet {
+            googleSignInButton.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(handleGoogleSignIn)))
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         self.navigationController?.navigationBar.setGradientBackground(colors: [UIColor.gradientStartBlue, UIColor.gradientEndBlue])
-        // Do any additional setup after loading the view.
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+        
+        setUpGoogleLogin()
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    @objc func handleGoogleSignIn(_ sender: UITapGestureRecognizer) {
+        GIDSignIn.sharedInstance().signIn()
     }
-    */
+    
+    private func setUpGoogleLogin() {
+        GIDSignIn.sharedInstance().uiDelegate = self
+    }
+}
 
+extension MyPageViewController: GIDSignInUIDelegate {
+    func sign(_ signIn: GIDSignIn!, present viewController: UIViewController!) {
+        print("Present")
+    }
+    
+    func sign(_ signIn: GIDSignIn!, dismiss viewController: UIViewController!) {
+        print("Dismiss")
+    }
 }

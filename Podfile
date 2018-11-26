@@ -7,4 +7,6 @@ target 'Bangpa' do
   pod 'Alamofire'
   pod 'SDWebImage'
   pod 'Firebase/Core'
+  pod 'Firebase/Auth'
+  pod 'GoogleSignIn'
 end

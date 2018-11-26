@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="rao-qX-wK2">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="rao-qX-wK2">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -16,9 +17,26 @@
                     <view key="view" contentMode="scaleToFill" id="Jlv-g2-JBf">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gSL-ov-nN8" customClass="GIDSignInButton">
+                                <rect key="frame" x="37.5" y="308.5" width="300" height="50"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="kx1-lS-47d"/>
+                                </constraints>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="gSL-ov-nN8" firstAttribute="centerY" secondItem="Jlv-g2-JBf" secondAttribute="centerY" id="DCq-nq-gcz"/>
+                            <constraint firstItem="gSL-ov-nN8" firstAttribute="width" secondItem="Jlv-g2-JBf" secondAttribute="width" multiplier="0.8" id="KFw-L5-zkR"/>
+                            <constraint firstItem="gSL-ov-nN8" firstAttribute="centerX" secondItem="Jlv-g2-JBf" secondAttribute="centerX" id="eeG-fk-ZIq"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="oki-j3-Kqa"/>
                     </view>
+                    <connections>
+                        <outlet property="googleSignInButton" destination="gSL-ov-nN8" id="Q75-NJ-xEa"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="o0W-6K-9Mv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
