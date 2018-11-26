@@ -89,6 +89,10 @@ extension AppDelegate: GIDSignInDelegate {
                 // ...
                 return
             }
+            let name = user.profile.name
+            let email = user.profile.email
+            let userInfo = ["name": name, "email": email]
+            NotificationCenter.default.post(name: BangpaNotificationName.loginSuccess.value, object: nil, userInfo: userInfo)
         }
     }
     
