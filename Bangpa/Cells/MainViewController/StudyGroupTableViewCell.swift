@@ -46,7 +46,7 @@ class StudyGroupTableViewCell: UITableViewCell {
     
     private func generateHashtagButton(with text: String) -> UIButton {
         let button = UIButton()
-        button.accessibilityTraits = UIAccessibilityTraitStaticText
+        button.accessibilityTraits = UIAccessibilityTraits.staticText
         button.titleLabel?.font = UIFont.systemFont(ofSize: 12)
         button.layer.cornerRadius = 10
         button.isUserInteractionEnabled = false

@@ -22,7 +22,7 @@ class NMapViewResources: NSObject {
         case NMapPOIflagTypeCompass:
             return #imageLiteral(resourceName: "ic_angle")
         case UserPOIflagTypeDefault:
-            return #imageLiteral(resourceName: "pubtrans_exact_default")
+            return UIImage(named: "marker.png")
         case UserPOIflagTypeInvisible:
             return #imageLiteral(resourceName: "1px_dot")
         default:

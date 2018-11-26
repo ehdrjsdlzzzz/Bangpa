@@ -49,7 +49,7 @@ class MapViewController: UIViewController {
     fileprivate func setupTableView(){
         searchResultTableView.delegate = self
         searchResultTableView.dataSource = self
-        view.bringSubview(toFront: searchResultTableView)
+        view.bringSubviewToFront(searchResultTableView)
     }
     
     fileprivate func setupSearchBar(){
@@ -71,7 +71,7 @@ class MapViewController: UIViewController {
             mapView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
             
             view.addSubview(mapView)
-            view.bringSubview(toFront: changeStateButton)
+            view.bringSubviewToFront(changeStateButton)
         }
     }
     
