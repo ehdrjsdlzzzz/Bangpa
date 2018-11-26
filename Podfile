@@ -9,4 +9,5 @@ target 'Bangpa' do
   pod 'Firebase/Core'
   pod 'Firebase/Auth'
   pod 'GoogleSignIn'
+  pod 'naveridlogin-sdk-ios'
 end

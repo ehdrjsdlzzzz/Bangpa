@@ -19,23 +19,61 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gSL-ov-nN8" customClass="GIDSignInButton">
-                                <rect key="frame" x="37.5" y="308.5" width="300" height="50"/>
+                                <rect key="frame" x="10" y="607" width="355" height="50"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="kx1-lS-47d"/>
                                 </constraints>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TAx-mi-Tl9">
+                                <rect key="frame" x="10" y="547" width="355" height="50"/>
+                                <color key="backgroundColor" red="0.0" green="0.56284224989999998" blue="0.31881666180000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="N00-M1-dNh"/>
+                                </constraints>
+                                <state key="normal" title="네이버 아이디로 로그인">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="handleNaverSignIn:" destination="rao-qX-wK2" eventType="touchUpInside" id="hPA-3N-TDC"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IA6-nF-9Fh">
+                                <rect key="frame" x="166.5" y="50" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Oh-eD-2wL">
+                                <rect key="frame" x="10" y="487" width="355" height="50"/>
+                                <color key="backgroundColor" red="0.98052269219999999" green="0.84487193819999995" blue="0.2163413465" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="fLG-lZ-c8r"/>
+                                </constraints>
+                                <state key="normal" title="카카오로 로그인">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="gSL-ov-nN8" firstAttribute="centerY" secondItem="Jlv-g2-JBf" secondAttribute="centerY" id="DCq-nq-gcz"/>
-                            <constraint firstItem="gSL-ov-nN8" firstAttribute="width" secondItem="Jlv-g2-JBf" secondAttribute="width" multiplier="0.8" id="KFw-L5-zkR"/>
-                            <constraint firstItem="gSL-ov-nN8" firstAttribute="centerX" secondItem="Jlv-g2-JBf" secondAttribute="centerX" id="eeG-fk-ZIq"/>
+                            <constraint firstItem="3Oh-eD-2wL" firstAttribute="leading" secondItem="oki-j3-Kqa" secondAttribute="leading" constant="10" id="8HX-6e-kW2"/>
+                            <constraint firstItem="TAx-mi-Tl9" firstAttribute="leading" secondItem="oki-j3-Kqa" secondAttribute="leading" constant="10" id="JGP-O9-PY9"/>
+                            <constraint firstItem="IA6-nF-9Fh" firstAttribute="top" secondItem="oki-j3-Kqa" secondAttribute="top" constant="30" id="MgS-tg-asb"/>
+                            <constraint firstItem="oki-j3-Kqa" firstAttribute="trailing" secondItem="TAx-mi-Tl9" secondAttribute="trailing" constant="10" id="NLD-Wr-N6L"/>
+                            <constraint firstItem="TAx-mi-Tl9" firstAttribute="top" secondItem="3Oh-eD-2wL" secondAttribute="bottom" constant="10" id="PSV-cl-J9i"/>
+                            <constraint firstItem="gSL-ov-nN8" firstAttribute="top" secondItem="TAx-mi-Tl9" secondAttribute="bottom" constant="10" id="Qai-wr-Hb5"/>
+                            <constraint firstItem="gSL-ov-nN8" firstAttribute="leading" secondItem="oki-j3-Kqa" secondAttribute="leading" constant="10" id="ZZ0-Oh-Doh"/>
+                            <constraint firstItem="oki-j3-Kqa" firstAttribute="trailing" secondItem="3Oh-eD-2wL" secondAttribute="trailing" constant="10" id="cck-Xw-tq2"/>
+                            <constraint firstItem="oki-j3-Kqa" firstAttribute="bottom" secondItem="gSL-ov-nN8" secondAttribute="bottom" constant="10" id="e6T-Up-Kuf"/>
+                            <constraint firstItem="oki-j3-Kqa" firstAttribute="trailing" secondItem="gSL-ov-nN8" secondAttribute="trailing" constant="10" id="rhs-21-hXk"/>
+                            <constraint firstItem="IA6-nF-9Fh" firstAttribute="centerX" secondItem="Jlv-g2-JBf" secondAttribute="centerX" id="t8E-k7-2k4"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="oki-j3-Kqa"/>
                     </view>
                     <connections>
                         <outlet property="googleSignInButton" destination="gSL-ov-nN8" id="Q75-NJ-xEa"/>
+                        <outlet property="idLabel" destination="IA6-nF-9Fh" id="1SV-wo-VWD"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="o0W-6K-9Mv" userLabel="First Responder" sceneMemberID="firstResponder"/>

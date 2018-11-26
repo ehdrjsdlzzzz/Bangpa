@@ -9,6 +9,7 @@
 import UIKit
 import Firebase
 import GoogleSignIn
+import NaverThirdPartyLogin
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -19,17 +20,33 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         FirebaseApp.configure()
         setUpGoogleLogin()
-        
+        setUpNaverLogin()
         return true
     }
     
     func application(_ app: UIApplication, open url: URL, options: [UIApplication.OpenURLOptionsKey : Any] = [:]) -> Bool {
+        if url.absoluteString.contains("bangpastudyfinder") {
+            return NaverThirdPartyLoginConnection.getSharedInstance().application(app, open: url, options: options)
+        }
+        
         return GIDSignIn.sharedInstance().handle(url, sourceApplication: options[UIApplication.OpenURLOptionsKey.sourceApplication] as? String, annotation: [:])
     }
     
     private func setUpGoogleLogin() {
         GIDSignIn.sharedInstance().clientID = FirebaseApp.app()?.options.clientID
         GIDSignIn.sharedInstance().delegate = self
+    }
+    
+    private func setUpNaverLogin() {
+        let instance = NaverThirdPartyLoginConnection.getSharedInstance()
+        instance?.isInAppOauthEnable = true // --- 1
+        instance?.isNaverAppOauthEnable = true // --- 2
+        instance?.isOnlyPortraitSupportedInIphone() // --- 3
+        // --- 4
+        instance?.serviceUrlScheme = kServiceAppUrlScheme
+        instance?.consumerKey = kConsumerKey
+        instance?.consumerSecret = kConsumerSecret
+        instance?.appName = kServiceAppName
     }
 
     func applicationWillResignActive(_ application: UIApplication) {

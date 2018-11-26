@@ -9,9 +9,12 @@
 import UIKit
 import Firebase
 import GoogleSignIn
+import NaverThirdPartyLogin
+import Alamofire
 
-class MyPageViewController: UIViewController {
-    
+class MyPageViewController: UIViewController, GIDSignInUIDelegate {
+    private let loginInstance = NaverThirdPartyLoginConnection.getSharedInstance()
+    @IBOutlet weak var idLabel: UILabel!
     @IBOutlet weak var googleSignInButton: GIDSignInButton! {
         didSet {
             googleSignInButton.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(handleGoogleSignIn)))
@@ -33,14 +36,53 @@ class MyPageViewController: UIViewController {
     private func setUpGoogleLogin() {
         GIDSignIn.sharedInstance().uiDelegate = self
     }
+    @IBAction func handleNaverSignIn(_ sender: Any) {
+        loginInstance?.delegate = self
+        loginInstance?.requestThirdPartyLogin()
+    }
 }
 
-extension MyPageViewController: GIDSignInUIDelegate {
-    func sign(_ signIn: GIDSignIn!, present viewController: UIViewController!) {
-        print("Present")
+extension MyPageViewController: NaverThirdPartyLoginConnectionDelegate {
+    func oauth20ConnectionDidOpenInAppBrowser(forOAuth request: URLRequest!) {
+        let naverSignInViewController = NLoginThirdPartyOAuth20InAppBrowserViewController(request: request)!
+        present(naverSignInViewController, animated: true, completion: nil)
+    }
+    // ---- 4
+    func oauth20ConnectionDidFinishRequestACTokenWithAuthCode() {
+        print("Success oauth20ConnectionDidFinishRequestACTokenWithAuthCode")
+        getNaverEmailFromURL()
+    }
+    // ---- 5
+    func oauth20ConnectionDidFinishRequestACTokenWithRefreshToken() {
+        print("Success oauth20ConnectionDidFinishRequestACTokenWithRefreshToken")
+        getNaverEmailFromURL()
+    }
+    // ---- 6
+    func oauth20ConnectionDidFinishDeleteToken() {
+        
     }
     
-    func sign(_ signIn: GIDSignIn!, dismiss viewController: UIViewController!) {
-        print("Dismiss")
+    // ---- 7
+    func oauth20Connection(_ oauthConnection: NaverThirdPartyLoginConnection!, didFailWithError error: Error!) {
+        print(error.localizedDescription)
+        print(error)
     }
+    // ---- 8
+    func getNaverEmailFromURL(){
+        guard let loginConn = NaverThirdPartyLoginConnection.getSharedInstance() else {return}
+        guard let tokenType = loginConn.tokenType else {return}
+        guard let accessToken = loginConn.accessToken else {return}
+        
+        let authorization = "\(tokenType) \(accessToken)"
+        Alamofire.request("https://openapi.naver.com/v1/nid/me", method: .get, parameters: nil, encoding: JSONEncoding.default, headers: ["Authorization" : authorization]).responseJSON { (response) in
+            guard let result = response.result.value as? [String: Any] else {return}
+            guard let object = result["response"] as? [String: Any] else {return}
+            guard let name = object["name"] as? String else {return}
+            guard let email = object["email"] as? String else {return}
+            
+            self.idLabel.text = email
+            print(result)
+        }
+    }
+
 }

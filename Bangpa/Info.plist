@@ -26,11 +26,26 @@
 				<string>com.googleusercontent.apps.1073735502998-e0etjkta3rg861n7f6jgr64ne2eq6f1c</string>
 			</array>
 		</dict>
+		<dict>
+			<key>CFBundleTypeRole</key>
+			<string>Editor</string>
+			<key>CFBundleURLName</key>
+			<string>bangpastudyfinder</string>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>bangpastudyfinder</string>
+			</array>
+		</dict>
 	</array>
 	<key>CFBundleVersion</key>
 	<string>1</string>
 	<key>LSApplicationCategoryType</key>
 	<string>NSLocationWhenInUseUsageDescription</string>
+	<key>LSApplicationQueriesSchemes</key>
+	<array>
+		<string>naversearchapp</string>
+		<string>naversearchthirdlogin</string>
+	</array>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
 	<key>NSAppTransportSecurity</key>

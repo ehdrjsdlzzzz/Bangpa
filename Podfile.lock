@@ -78,6 +78,7 @@ PODS:
     - nanopb/encode (= 0.3.901)
   - nanopb/decode (0.3.901)
   - nanopb/encode (0.3.901)
+  - naveridlogin-sdk-ios (4.0.10)
   - SDWebImage (4.4.2):
     - SDWebImage/Core (= 4.4.2)
   - SDWebImage/Core (4.4.2)
@@ -87,6 +88,7 @@ DEPENDENCIES:
   - Firebase/Auth
   - Firebase/Core
   - GoogleSignIn
+  - naveridlogin-sdk-ios
   - SDWebImage
 
 SPEC REPOS:
@@ -105,6 +107,7 @@ SPEC REPOS:
     - GTMOAuth2
     - GTMSessionFetcher
     - nanopb
+    - naveridlogin-sdk-ios
     - SDWebImage
 
 SPEC CHECKSUMS:
@@ -122,8 +125,9 @@ SPEC CHECKSUMS:
   GTMOAuth2: c77fe325e4acd453837e72d91e3b5f13116857b2
   GTMSessionFetcher: 0c4baf0a73acd0041bf9f71ea018deedab5ea84e
   nanopb: 2901f78ea1b7b4015c860c2fdd1ea2fee1a18d48
+  naveridlogin-sdk-ios: b5a31343e7f98bab1a5a37b1bc0af3354ad59d11
   SDWebImage: 624d6e296c69b244bcede364c72ae0430ac14681
 
-PODFILE CHECKSUM: 688be6125c5360ab8d00fec430adc5a0996b97c6
+PODFILE CHECKSUM: 3638c471499784354940db3aa3288be9cd51d9de
 
 COCOAPODS: 1.5.3
