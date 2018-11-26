@@ -13,6 +13,7 @@ import NaverThirdPartyLogin
 import Alamofire
 
 class MyPageViewController: UIViewController, GIDSignInUIDelegate {
+    @IBOutlet weak var kakoSignInButton: KOLoginButton!
     private let loginInstance = NaverThirdPartyLoginConnection.getSharedInstance()
     @IBOutlet weak var idLabel: UILabel!
     @IBOutlet weak var googleSignInButton: GIDSignInButton! {
@@ -53,9 +54,16 @@ class MyPageViewController: UIViewController, GIDSignInUIDelegate {
                 print(error?.localizedDescription ?? "에러")
                 return
             }
-            
+
             if session.isOpen() {
-                print("로그인 성공")
+                KOSessionTask.userMeTask(completion: { (error, profile) in
+                    if error != nil {
+                        print(error?.localizedDescription)
+                        return
+                    }
+                    
+                    self.idLabel.text = profile?.nickname
+                })
             }else {
                 print("로그인 실패")
             }

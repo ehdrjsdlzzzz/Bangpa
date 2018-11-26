@@ -49,6 +49,10 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="fLG-lZ-c8r"/>
                                 </constraints>
+                                <color key="tintColor" red="0.28235294117647058" green="0.20000000000000001" blue="0.20392156862745098" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
                                 <connections>
                                     <action selector="handleKakaoSignIn:" destination="rao-qX-wK2" eventType="touchUpInside" id="LjU-z4-YaI"/>
                                 </connections>
@@ -73,6 +77,7 @@
                     <connections>
                         <outlet property="googleSignInButton" destination="gSL-ov-nN8" id="Q75-NJ-xEa"/>
                         <outlet property="idLabel" destination="IA6-nF-9Fh" id="1SV-wo-VWD"/>
+                        <outlet property="kakoSignInButton" destination="3Oh-eD-2wL" id="JKW-76-UWM"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="o0W-6K-9Mv" userLabel="First Responder" sceneMemberID="firstResponder"/>
