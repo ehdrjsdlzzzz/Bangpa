@@ -25,6 +25,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     func application(_ app: UIApplication, open url: URL, options: [UIApplication.OpenURLOptionsKey : Any] = [:]) -> Bool {
+        if KOSession.isKakaoAccountLoginCallback(url) {
+            return KOSession.handleOpen(url)
+        }
+        
         if url.absoluteString.contains("bangpastudyfinder") {
             return NaverThirdPartyLoginConnection.getSharedInstance().application(app, open: url, options: options)
         }

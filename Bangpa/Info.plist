@@ -36,13 +36,30 @@
 				<string>bangpastudyfinder</string>
 			</array>
 		</dict>
+		<dict>
+			<key>CFBundleTypeRole</key>
+			<string>Editor</string>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>kakaof03cbb78ad53417562c07b2a034bf7cb</string>
+			</array>
+		</dict>
 	</array>
 	<key>CFBundleVersion</key>
 	<string>1</string>
+	<key>KAKAO_APP_KEY</key>
+	<string>f03cbb78ad53417562c07b2a034bf7cb</string>
 	<key>LSApplicationCategoryType</key>
 	<string>NSLocationWhenInUseUsageDescription</string>
 	<key>LSApplicationQueriesSchemes</key>
 	<array>
+		<string>storylink</string>
+		<string>kakaostory-2.9.0</string>
+		<string>kakaolink</string>
+		<string>kakaotalk-4.5.0</string>
+		<string>kakaof03cbb78ad53417562c07b2a034bf7cb</string>
+		<string>kakaokompassauth</string>
+		<string>storykompassauth</string>
 		<string>naversearchapp</string>
 		<string>naversearchthirdlogin</string>
 	</array>

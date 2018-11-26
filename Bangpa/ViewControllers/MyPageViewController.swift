@@ -40,6 +40,28 @@ class MyPageViewController: UIViewController, GIDSignInUIDelegate {
         loginInstance?.delegate = self
         loginInstance?.requestThirdPartyLogin()
     }
+    
+    @IBAction func handleKakaoSignIn(_ sender: Any) {
+        guard let session = KOSession.shared() else { return }
+        
+        if session.isOpen() {
+            session.close()
+        }
+        
+        session.open { (error) in
+            if error != nil {
+                print(error?.localizedDescription ?? "에러")
+                return
+            }
+            
+            if session.isOpen() {
+                print("로그인 성공")
+            }else {
+                print("로그인 실패")
+            }
+        }
+        
+    }
 }
 
 extension MyPageViewController: NaverThirdPartyLoginConnectionDelegate {

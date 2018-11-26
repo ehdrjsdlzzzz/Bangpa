@@ -17,6 +17,7 @@
 		3E91413A21ABF9E700746E43 /* ApiGatewayMac.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 3E91413821ABF9E700746E43 /* ApiGatewayMac.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		3E91413D21ABF9F000746E43 /* NMapViewerSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E91413C21ABF9F000746E43 /* NMapViewerSDK.framework */; };
 		3E91414121AC0BB300746E43 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3E91414021AC0BB300746E43 /* GoogleService-Info.plist */; };
+		3E91414321AC3C9300746E43 /* KakaoOpenSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E91414221AC3C9300746E43 /* KakaoOpenSDK.framework */; };
 		3EC4FBC92129880A00E19A54 /* SectionDescriptionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EC4FBC72129880A00E19A54 /* SectionDescriptionTableViewCell.swift */; };
 		3EC4FBCA2129880A00E19A54 /* SectionDescriptionTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3EC4FBC82129880A00E19A54 /* SectionDescriptionTableViewCell.xib */; };
 		3EC4FBCC212990D800E19A54 /* StudyGroupTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EC4FBCB212990D800E19A54 /* StudyGroupTableViewCell.swift */; };
@@ -67,6 +68,7 @@
 		3E91413821ABF9E700746E43 /* ApiGatewayMac.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ApiGatewayMac.framework; path = Frameworks/ApiGatewayMac.framework; sourceTree = "<group>"; };
 		3E91413C21ABF9F000746E43 /* NMapViewerSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NMapViewerSDK.framework; path = Frameworks/NMapViewerSDK.framework; sourceTree = "<group>"; };
 		3E91414021AC0BB300746E43 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		3E91414221AC3C9300746E43 /* KakaoOpenSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = KakaoOpenSDK.framework; sourceTree = "<group>"; };
 		3EC4FBC72129880A00E19A54 /* SectionDescriptionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionDescriptionTableViewCell.swift; sourceTree = "<group>"; };
 		3EC4FBC82129880A00E19A54 /* SectionDescriptionTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SectionDescriptionTableViewCell.xib; sourceTree = "<group>"; };
 		3EC4FBCB212990D800E19A54 /* StudyGroupTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudyGroupTableViewCell.swift; sourceTree = "<group>"; };
@@ -104,6 +106,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3E91413D21ABF9F000746E43 /* NMapViewerSDK.framework in Frameworks */,
+				3E91414321AC3C9300746E43 /* KakaoOpenSDK.framework in Frameworks */,
 				3E91413921ABF9E700746E43 /* ApiGatewayMac.framework in Frameworks */,
 				72BC6A1E213FC477BB74CD27 /* Pods_Bangpa.framework in Frameworks */,
 			);
@@ -194,6 +197,7 @@
 				3ED5CDC7211088C300E8DF6B /* LaunchScreen.storyboard */,
 				3ED5CDCA211088C300E8DF6B /* Info.plist */,
 				3EC4FBE02129C36C00E19A54 /* Bangpa-Bridging-Header.h */,
+				3E91414221AC3C9300746E43 /* KakaoOpenSDK.framework */,
 				3E91414021AC0BB300746E43 /* GoogleService-Info.plist */,
 			);
 			path = Bangpa;
@@ -600,6 +604,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)",
 					"$(PROJECT_DIR)/Frameworks",
+					"$(PROJECT_DIR)/Bangpa",
 				);
 				INFOPLIST_FILE = Bangpa/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
@@ -615,6 +620,7 @@
 					"\"SDWebImage\"",
 					"-lxml2",
 					"-ObjC",
+					"-all_load",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.adhoc.Bangpa;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -635,6 +641,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)",
 					"$(PROJECT_DIR)/Frameworks",
+					"$(PROJECT_DIR)/Bangpa",
 				);
 				INFOPLIST_FILE = Bangpa/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
@@ -650,6 +657,7 @@
 					"\"SDWebImage\"",
 					"-lxml2",
 					"-ObjC",
+					"-all_load",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.adhoc.Bangpa;
 				PRODUCT_NAME = "$(TARGET_NAME)";
