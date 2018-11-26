@@ -6,4 +6,5 @@ target 'Bangpa' do
   # Pods for Bangpa
   pod 'Alamofire'
   pod 'SDWebImage'
+  pod 'Firebase/Core'
 end

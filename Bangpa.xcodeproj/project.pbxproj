@@ -16,6 +16,7 @@
 		3E91413921ABF9E700746E43 /* ApiGatewayMac.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E91413821ABF9E700746E43 /* ApiGatewayMac.framework */; };
 		3E91413A21ABF9E700746E43 /* ApiGatewayMac.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 3E91413821ABF9E700746E43 /* ApiGatewayMac.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		3E91413D21ABF9F000746E43 /* NMapViewerSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E91413C21ABF9F000746E43 /* NMapViewerSDK.framework */; };
+		3E91414121AC0BB300746E43 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3E91414021AC0BB300746E43 /* GoogleService-Info.plist */; };
 		3EC4FBC92129880A00E19A54 /* SectionDescriptionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EC4FBC72129880A00E19A54 /* SectionDescriptionTableViewCell.swift */; };
 		3EC4FBCA2129880A00E19A54 /* SectionDescriptionTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3EC4FBC82129880A00E19A54 /* SectionDescriptionTableViewCell.xib */; };
 		3EC4FBCC212990D800E19A54 /* StudyGroupTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EC4FBCB212990D800E19A54 /* StudyGroupTableViewCell.swift */; };
@@ -65,6 +66,7 @@
 		3E5533C0212A4F0900288AEE /* MapViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MapViewController.storyboard; sourceTree = "<group>"; };
 		3E91413821ABF9E700746E43 /* ApiGatewayMac.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ApiGatewayMac.framework; path = Frameworks/ApiGatewayMac.framework; sourceTree = "<group>"; };
 		3E91413C21ABF9F000746E43 /* NMapViewerSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NMapViewerSDK.framework; path = Frameworks/NMapViewerSDK.framework; sourceTree = "<group>"; };
+		3E91414021AC0BB300746E43 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		3EC4FBC72129880A00E19A54 /* SectionDescriptionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionDescriptionTableViewCell.swift; sourceTree = "<group>"; };
 		3EC4FBC82129880A00E19A54 /* SectionDescriptionTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SectionDescriptionTableViewCell.xib; sourceTree = "<group>"; };
 		3EC4FBCB212990D800E19A54 /* StudyGroupTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudyGroupTableViewCell.swift; sourceTree = "<group>"; };
@@ -192,6 +194,7 @@
 				3ED5CDC7211088C300E8DF6B /* LaunchScreen.storyboard */,
 				3ED5CDCA211088C300E8DF6B /* Info.plist */,
 				3EC4FBE02129C36C00E19A54 /* Bangpa-Bridging-Header.h */,
+				3E91414021AC0BB300746E43 /* GoogleService-Info.plist */,
 			);
 			path = Bangpa;
 			sourceTree = "<group>";
@@ -327,6 +330,7 @@
 				3ED5CDC6211088C300E8DF6B /* Assets.xcassets in Resources */,
 				3E5533C1212A4F0900288AEE /* MapViewController.storyboard in Resources */,
 				3ED5CDEA21109BCA00E8DF6B /* SearchStudyRoomViewController.storyboard in Resources */,
+				3E91414121AC0BB300746E43 /* GoogleService-Info.plist in Resources */,
 				3ED5CDC4211088C200E8DF6B /* Main.storyboard in Resources */,
 				3ED5CDF221109C2200E8DF6B /* MyPageViewController.storyboard in Resources */,
 			);
@@ -356,12 +360,16 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-Bangpa/Pods-Bangpa-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
 				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -568,10 +576,7 @@
 				);
 				INFOPLIST_FILE = Bangpa/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-framework",
@@ -603,10 +608,7 @@
 				);
 				INFOPLIST_FILE = Bangpa/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-framework",
