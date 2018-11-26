@@ -25,7 +25,7 @@
                                     <constraint firstAttribute="height" constant="50" id="kx1-lS-47d"/>
                                 </constraints>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TAx-mi-Tl9">
+                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TAx-mi-Tl9">
                                 <rect key="frame" x="10" y="547" width="355" height="50"/>
                                 <color key="backgroundColor" red="0.0" green="0.56284224989999998" blue="0.31881666180000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
@@ -78,11 +78,20 @@
                         <outlet property="googleSignInButton" destination="gSL-ov-nN8" id="Q75-NJ-xEa"/>
                         <outlet property="idLabel" destination="IA6-nF-9Fh" id="1SV-wo-VWD"/>
                         <outlet property="kakoSignInButton" destination="3Oh-eD-2wL" id="JKW-76-UWM"/>
+                        <segue destination="cdo-E9-VHe" kind="show" identifier="signInSuccess" id="ZPM-Ag-CeZ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="o0W-6K-9Mv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="894" y="122"/>
+            <point key="canvasLocation" x="893.60000000000002" y="121.88905547226388"/>
+        </scene>
+        <!--AdditionalInfoViewController-->
+        <scene sceneID="QCv-C9-wec">
+            <objects>
+                <viewControllerPlaceholder storyboardName="AdditionalInfoViewController" referencedIdentifier="AdditionalInfoViewController" id="cdo-E9-VHe" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jh5-pS-bXu" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1684" y="121"/>
         </scene>
     </scenes>
 </document>

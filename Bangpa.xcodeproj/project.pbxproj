@@ -18,6 +18,9 @@
 		3E91413D21ABF9F000746E43 /* NMapViewerSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E91413C21ABF9F000746E43 /* NMapViewerSDK.framework */; };
 		3E91414121AC0BB300746E43 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3E91414021AC0BB300746E43 /* GoogleService-Info.plist */; };
 		3E91414321AC3C9300746E43 /* KakaoOpenSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E91414221AC3C9300746E43 /* KakaoOpenSDK.framework */; };
+		3E91414D21AC6B9D00746E43 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E91414C21AC6B9D00746E43 /* Constants.swift */; };
+		3E91414F21AC6E9C00746E43 /* AdditionalInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E91414E21AC6E9C00746E43 /* AdditionalInfoViewController.swift */; };
+		3E91415121AC6EAA00746E43 /* AdditionalInfoViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3E91415021AC6EAA00746E43 /* AdditionalInfoViewController.storyboard */; };
 		3EC4FBC92129880A00E19A54 /* SectionDescriptionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EC4FBC72129880A00E19A54 /* SectionDescriptionTableViewCell.swift */; };
 		3EC4FBCA2129880A00E19A54 /* SectionDescriptionTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3EC4FBC82129880A00E19A54 /* SectionDescriptionTableViewCell.xib */; };
 		3EC4FBCC212990D800E19A54 /* StudyGroupTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EC4FBCB212990D800E19A54 /* StudyGroupTableViewCell.swift */; };
@@ -69,6 +72,9 @@
 		3E91413C21ABF9F000746E43 /* NMapViewerSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NMapViewerSDK.framework; path = Frameworks/NMapViewerSDK.framework; sourceTree = "<group>"; };
 		3E91414021AC0BB300746E43 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		3E91414221AC3C9300746E43 /* KakaoOpenSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = KakaoOpenSDK.framework; sourceTree = "<group>"; };
+		3E91414C21AC6B9D00746E43 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		3E91414E21AC6E9C00746E43 /* AdditionalInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdditionalInfoViewController.swift; sourceTree = "<group>"; };
+		3E91415021AC6EAA00746E43 /* AdditionalInfoViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AdditionalInfoViewController.storyboard; sourceTree = "<group>"; };
 		3EC4FBC72129880A00E19A54 /* SectionDescriptionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionDescriptionTableViewCell.swift; sourceTree = "<group>"; };
 		3EC4FBC82129880A00E19A54 /* SectionDescriptionTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SectionDescriptionTableViewCell.xib; sourceTree = "<group>"; };
 		3EC4FBCB212990D800E19A54 /* StudyGroupTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudyGroupTableViewCell.swift; sourceTree = "<group>"; };
@@ -141,6 +147,14 @@
 			path = Service;
 			sourceTree = "<group>";
 		};
+		3E91414B21AC6B8800746E43 /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				3E91414C21AC6B9D00746E43 /* Constants.swift */,
+			);
+			path = Constants;
+			sourceTree = "<group>";
+		};
 		3EC4FBC4212984CA00E19A54 /* MainViewController */ = {
 			isa = PBXGroup;
 			children = (
@@ -183,6 +197,7 @@
 		3ED5CDBD211088C200E8DF6B /* Bangpa */ = {
 			isa = PBXGroup;
 			children = (
+				3E91414B21AC6B8800746E43 /* Constants */,
 				3E0E9B1821301FD700B3956F /* Service */,
 				3E0E9B1521301EE400B3956F /* Model */,
 				3EC4FBE1212A5D3700E19A54 /* Resources */,
@@ -211,6 +226,7 @@
 				3ED5CDED21109BFD00E8DF6B /* SearchStudyGroupViewController.swift */,
 				3ED5CDF321109C2B00E8DF6B /* MyPageViewController.swift */,
 				3E5533BE212A4F0000288AEE /* MapViewController.swift */,
+				3E91414E21AC6E9C00746E43 /* AdditionalInfoViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -222,6 +238,7 @@
 				3ED5CDE921109BCA00E8DF6B /* SearchStudyRoomViewController.storyboard */,
 				3ED5CDEF21109C0400E8DF6B /* SearchStudyGroupViewController.storyboard */,
 				3ED5CDF121109C2200E8DF6B /* MyPageViewController.storyboard */,
+				3E91415021AC6EAA00746E43 /* AdditionalInfoViewController.storyboard */,
 				3E5533C0212A4F0900288AEE /* MapViewController.storyboard */,
 			);
 			path = Storyboards;
@@ -332,6 +349,7 @@
 				3ED5CDE821109B9E00E8DF6B /* MainViewController.storyboard in Resources */,
 				3ED5CDF021109C0400E8DF6B /* SearchStudyGroupViewController.storyboard in Resources */,
 				3ED5CDC9211088C300E8DF6B /* LaunchScreen.storyboard in Resources */,
+				3E91415121AC6EAA00746E43 /* AdditionalInfoViewController.storyboard in Resources */,
 				3ED5CDC6211088C300E8DF6B /* Assets.xcassets in Resources */,
 				3E5533C1212A4F0900288AEE /* MapViewController.storyboard in Resources */,
 				3ED5CDEA21109BCA00E8DF6B /* SearchStudyRoomViewController.storyboard in Resources */,
@@ -435,6 +453,7 @@
 				3EC4FBC92129880A00E19A54 /* SectionDescriptionTableViewCell.swift in Sources */,
 				3E0E9B1A21301FF200B3956F /* APIService.swift in Sources */,
 				3ED5CE002110AFAB00E8DF6B /* MainPromotionTableViewCell.swift in Sources */,
+				3E91414F21AC6E9C00746E43 /* AdditionalInfoViewController.swift in Sources */,
 				3EC4FBCC212990D800E19A54 /* StudyGroupTableViewCell.swift in Sources */,
 				3ED5CDF82110A1E100E8DF6B /* MainVCPresenter.swift in Sources */,
 				3EC4FBE3212A5D5100E19A54 /* NMapViewResources.swift in Sources */,
@@ -443,6 +462,7 @@
 				3E0E9B1E21303C6500B3956F /* GeoTransitionService.swift in Sources */,
 				3ED5CDEC21109BD500E8DF6B /* SearchStudyRoomViewController.swift in Sources */,
 				3ED5CDEE21109BFD00E8DF6B /* SearchStudyGroupViewController.swift in Sources */,
+				3E91414D21AC6B9D00746E43 /* Constants.swift in Sources */,
 				3E0E9B1721301EF700B3956F /* MapSearchResult.swift in Sources */,
 				3ED5CDFB2110ABA100E8DF6B /* ThemeColor.swift in Sources */,
 				3ED5CDFE2110AEDD00E8DF6B /* MainPromotionCollectionViewCell.swift in Sources */,

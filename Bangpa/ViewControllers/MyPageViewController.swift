@@ -28,6 +28,9 @@ class MyPageViewController: UIViewController, GIDSignInUIDelegate {
         self.navigationController?.navigationBar.setGradientBackground(colors: [UIColor.gradientStartBlue, UIColor.gradientEndBlue])
         
         setUpGoogleLogin()
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(handleSignInProcess), name: BangpaNotificationName.loginSuccess.value, object: nil)
+
     }
     
     @objc func handleGoogleSignIn(_ sender: UITapGestureRecognizer) {
@@ -37,6 +40,7 @@ class MyPageViewController: UIViewController, GIDSignInUIDelegate {
     private func setUpGoogleLogin() {
         GIDSignIn.sharedInstance().uiDelegate = self
     }
+    
     @IBAction func handleNaverSignIn(_ sender: Any) {
         loginInstance?.delegate = self
         loginInstance?.requestThirdPartyLogin()
@@ -58,17 +62,32 @@ class MyPageViewController: UIViewController, GIDSignInUIDelegate {
             if session.isOpen() {
                 KOSessionTask.userMeTask(completion: { (error, profile) in
                     if error != nil {
-                        print(error?.localizedDescription)
+                        print(error?.localizedDescription ?? "")
                         return
                     }
                     
-                    self.idLabel.text = profile?.nickname
+                    guard let name = profile?.nickname else { return }
+                    guard let email = profile?.account?.email else { return }
+                    print(name)
+                    print(email)
+                    let userInfo = ["name":name, "email":email]
+                    NotificationCenter.default.post(name: BangpaNotificationName.loginSuccess.value, object: nil, userInfo: userInfo)
                 })
             }else {
                 print("로그인 실패")
             }
         }
-        
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let userInfo = sender as? [String:String] else { print("no userInfo"); return }
+        guard let destination = segue.destination as? AdditionalInfoViewController else { print("No destination"); return }
+        print(userInfo)
+        destination.userInfo = userInfo
+    }
+    
+    @objc func handleSignInProcess(_ notification: Notification) {
+        performSegue(withIdentifier: BangpaSegueType.signInSuccess.identifier, sender: notification.userInfo)
     }
 }
 
@@ -110,8 +129,8 @@ extension MyPageViewController: NaverThirdPartyLoginConnectionDelegate {
             guard let name = object["name"] as? String else {return}
             guard let email = object["email"] as? String else {return}
             
-            self.idLabel.text = email
-            print(result)
+            let userInfo = ["name":name, "email":email]
+            NotificationCenter.default.post(name: BangpaNotificationName.loginSuccess.value, object: nil, userInfo: userInfo)
         }
     }
 
