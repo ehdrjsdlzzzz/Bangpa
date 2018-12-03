@@ -16,6 +16,11 @@
 		3E91413921ABF9E700746E43 /* ApiGatewayMac.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E91413821ABF9E700746E43 /* ApiGatewayMac.framework */; };
 		3E91413A21ABF9E700746E43 /* ApiGatewayMac.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 3E91413821ABF9E700746E43 /* ApiGatewayMac.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		3E91413D21ABF9F000746E43 /* NMapViewerSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E91413C21ABF9F000746E43 /* NMapViewerSDK.framework */; };
+		3E91414121AC0BB300746E43 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3E91414021AC0BB300746E43 /* GoogleService-Info.plist */; };
+		3E91414321AC3C9300746E43 /* KakaoOpenSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E91414221AC3C9300746E43 /* KakaoOpenSDK.framework */; };
+		3E91414D21AC6B9D00746E43 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E91414C21AC6B9D00746E43 /* Constants.swift */; };
+		3E91414F21AC6E9C00746E43 /* AdditionalInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E91414E21AC6E9C00746E43 /* AdditionalInfoViewController.swift */; };
+		3E91415121AC6EAA00746E43 /* AdditionalInfoViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3E91415021AC6EAA00746E43 /* AdditionalInfoViewController.storyboard */; };
 		3EC4FBC92129880A00E19A54 /* SectionDescriptionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EC4FBC72129880A00E19A54 /* SectionDescriptionTableViewCell.swift */; };
 		3EC4FBCA2129880A00E19A54 /* SectionDescriptionTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3EC4FBC82129880A00E19A54 /* SectionDescriptionTableViewCell.xib */; };
 		3EC4FBCC212990D800E19A54 /* StudyGroupTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EC4FBCB212990D800E19A54 /* StudyGroupTableViewCell.swift */; };
@@ -65,6 +70,11 @@
 		3E5533C0212A4F0900288AEE /* MapViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MapViewController.storyboard; sourceTree = "<group>"; };
 		3E91413821ABF9E700746E43 /* ApiGatewayMac.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ApiGatewayMac.framework; path = Frameworks/ApiGatewayMac.framework; sourceTree = "<group>"; };
 		3E91413C21ABF9F000746E43 /* NMapViewerSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NMapViewerSDK.framework; path = Frameworks/NMapViewerSDK.framework; sourceTree = "<group>"; };
+		3E91414021AC0BB300746E43 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		3E91414221AC3C9300746E43 /* KakaoOpenSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = KakaoOpenSDK.framework; sourceTree = "<group>"; };
+		3E91414C21AC6B9D00746E43 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		3E91414E21AC6E9C00746E43 /* AdditionalInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdditionalInfoViewController.swift; sourceTree = "<group>"; };
+		3E91415021AC6EAA00746E43 /* AdditionalInfoViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AdditionalInfoViewController.storyboard; sourceTree = "<group>"; };
 		3EC4FBC72129880A00E19A54 /* SectionDescriptionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionDescriptionTableViewCell.swift; sourceTree = "<group>"; };
 		3EC4FBC82129880A00E19A54 /* SectionDescriptionTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SectionDescriptionTableViewCell.xib; sourceTree = "<group>"; };
 		3EC4FBCB212990D800E19A54 /* StudyGroupTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudyGroupTableViewCell.swift; sourceTree = "<group>"; };
@@ -102,6 +112,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3E91413D21ABF9F000746E43 /* NMapViewerSDK.framework in Frameworks */,
+				3E91414321AC3C9300746E43 /* KakaoOpenSDK.framework in Frameworks */,
 				3E91413921ABF9E700746E43 /* ApiGatewayMac.framework in Frameworks */,
 				72BC6A1E213FC477BB74CD27 /* Pods_Bangpa.framework in Frameworks */,
 			);
@@ -134,6 +145,14 @@
 				3E0E9B1D21303C6500B3956F /* GeoTransitionService.swift */,
 			);
 			path = Service;
+			sourceTree = "<group>";
+		};
+		3E91414B21AC6B8800746E43 /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				3E91414C21AC6B9D00746E43 /* Constants.swift */,
+			);
+			path = Constants;
 			sourceTree = "<group>";
 		};
 		3EC4FBC4212984CA00E19A54 /* MainViewController */ = {
@@ -178,6 +197,7 @@
 		3ED5CDBD211088C200E8DF6B /* Bangpa */ = {
 			isa = PBXGroup;
 			children = (
+				3E91414B21AC6B8800746E43 /* Constants */,
 				3E0E9B1821301FD700B3956F /* Service */,
 				3E0E9B1521301EE400B3956F /* Model */,
 				3EC4FBE1212A5D3700E19A54 /* Resources */,
@@ -192,6 +212,8 @@
 				3ED5CDC7211088C300E8DF6B /* LaunchScreen.storyboard */,
 				3ED5CDCA211088C300E8DF6B /* Info.plist */,
 				3EC4FBE02129C36C00E19A54 /* Bangpa-Bridging-Header.h */,
+				3E91414221AC3C9300746E43 /* KakaoOpenSDK.framework */,
+				3E91414021AC0BB300746E43 /* GoogleService-Info.plist */,
 			);
 			path = Bangpa;
 			sourceTree = "<group>";
@@ -204,6 +226,7 @@
 				3ED5CDED21109BFD00E8DF6B /* SearchStudyGroupViewController.swift */,
 				3ED5CDF321109C2B00E8DF6B /* MyPageViewController.swift */,
 				3E5533BE212A4F0000288AEE /* MapViewController.swift */,
+				3E91414E21AC6E9C00746E43 /* AdditionalInfoViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -215,6 +238,7 @@
 				3ED5CDE921109BCA00E8DF6B /* SearchStudyRoomViewController.storyboard */,
 				3ED5CDEF21109C0400E8DF6B /* SearchStudyGroupViewController.storyboard */,
 				3ED5CDF121109C2200E8DF6B /* MyPageViewController.storyboard */,
+				3E91415021AC6EAA00746E43 /* AdditionalInfoViewController.storyboard */,
 				3E5533C0212A4F0900288AEE /* MapViewController.storyboard */,
 			);
 			path = Storyboards;
@@ -271,6 +295,7 @@
 				B5EC4E6BF9834B126B699241 /* [CP] Embed Pods Frameworks */,
 				3E5533BD2129C87900288AEE /* ShellScript */,
 				3E91413B21ABF9E700746E43 /* Embed Frameworks */,
+				AEC672AB9BAC68374A94F5CB /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -324,9 +349,11 @@
 				3ED5CDE821109B9E00E8DF6B /* MainViewController.storyboard in Resources */,
 				3ED5CDF021109C0400E8DF6B /* SearchStudyGroupViewController.storyboard in Resources */,
 				3ED5CDC9211088C300E8DF6B /* LaunchScreen.storyboard in Resources */,
+				3E91415121AC6EAA00746E43 /* AdditionalInfoViewController.storyboard in Resources */,
 				3ED5CDC6211088C300E8DF6B /* Assets.xcassets in Resources */,
 				3E5533C1212A4F0900288AEE /* MapViewController.storyboard in Resources */,
 				3ED5CDEA21109BCA00E8DF6B /* SearchStudyRoomViewController.storyboard in Resources */,
+				3E91414121AC0BB300746E43 /* GoogleService-Info.plist in Resources */,
 				3ED5CDC4211088C200E8DF6B /* Main.storyboard in Resources */,
 				3ED5CDF221109C2200E8DF6B /* MyPageViewController.storyboard in Resources */,
 			);
@@ -348,6 +375,24 @@
 			shellPath = /bin/sh;
 			shellScript = "${PROJECT_DIR}/Frameworks/strip-frameworks.sh\n";
 		};
+		AEC672AB9BAC68374A94F5CB /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Bangpa/Pods-Bangpa-resources.sh",
+				"${PODS_ROOT}/GoogleSignIn/Resources/GoogleSignIn.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GoogleSignIn.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Bangpa/Pods-Bangpa-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		B5EC4E6BF9834B126B699241 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -356,12 +401,24 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-Bangpa/Pods-Bangpa-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/GTMOAuth2/GTMOAuth2.framework",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
 				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+				"${PODS_ROOT}/naveridlogin-sdk-ios/NaverThirdPartyLogin.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMOAuth2.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/NaverThirdPartyLogin.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -396,6 +453,7 @@
 				3EC4FBC92129880A00E19A54 /* SectionDescriptionTableViewCell.swift in Sources */,
 				3E0E9B1A21301FF200B3956F /* APIService.swift in Sources */,
 				3ED5CE002110AFAB00E8DF6B /* MainPromotionTableViewCell.swift in Sources */,
+				3E91414F21AC6E9C00746E43 /* AdditionalInfoViewController.swift in Sources */,
 				3EC4FBCC212990D800E19A54 /* StudyGroupTableViewCell.swift in Sources */,
 				3ED5CDF82110A1E100E8DF6B /* MainVCPresenter.swift in Sources */,
 				3EC4FBE3212A5D5100E19A54 /* NMapViewResources.swift in Sources */,
@@ -404,6 +462,7 @@
 				3E0E9B1E21303C6500B3956F /* GeoTransitionService.swift in Sources */,
 				3ED5CDEC21109BD500E8DF6B /* SearchStudyRoomViewController.swift in Sources */,
 				3ED5CDEE21109BFD00E8DF6B /* SearchStudyGroupViewController.swift in Sources */,
+				3E91414D21AC6B9D00746E43 /* Constants.swift in Sources */,
 				3E0E9B1721301EF700B3956F /* MapSearchResult.swift in Sources */,
 				3ED5CDFB2110ABA100E8DF6B /* ThemeColor.swift in Sources */,
 				3ED5CDFE2110AEDD00E8DF6B /* MainPromotionCollectionViewCell.swift in Sources */,
@@ -565,6 +624,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)",
 					"$(PROJECT_DIR)/Frameworks",
+					"$(PROJECT_DIR)/Bangpa",
 				);
 				INFOPLIST_FILE = Bangpa/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
@@ -580,6 +640,7 @@
 					"\"SDWebImage\"",
 					"-lxml2",
 					"-ObjC",
+					"-all_load",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.adhoc.Bangpa;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -600,6 +661,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)",
 					"$(PROJECT_DIR)/Frameworks",
+					"$(PROJECT_DIR)/Bangpa",
 				);
 				INFOPLIST_FILE = Bangpa/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
@@ -615,6 +677,7 @@
 					"\"SDWebImage\"",
 					"-lxml2",
 					"-ObjC",
+					"-all_load",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.adhoc.Bangpa;
 				PRODUCT_NAME = "$(TARGET_NAME)";

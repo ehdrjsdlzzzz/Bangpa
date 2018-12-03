@@ -6,4 +6,8 @@ target 'Bangpa' do
   # Pods for Bangpa
   pod 'Alamofire'
   pod 'SDWebImage'
+  pod 'Firebase/Core'
+  pod 'Firebase/Auth'
+  pod 'GoogleSignIn'
+  pod 'naveridlogin-sdk-ios'
 end

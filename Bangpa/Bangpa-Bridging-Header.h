@@ -10,5 +10,6 @@
 #define Bangpa_Bridging_Header_h
 #import <NMapViewerSDK/NMapView.h>
 #import <NMapViewerSDK/NMapLocationManager.h>
+#import <KakaoOpenSDK/KakaoOpenSDK.h>
 #endif /* Bangpa_Bridging_Header_h */
 
