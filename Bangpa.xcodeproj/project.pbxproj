@@ -700,7 +700,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.adhoc.Bangpa;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "/Users/dongkun/Programming/ADHOC/Bangpa/Bangpa/Bangpa-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "$(PROJECT_DIR)/Bangpa/Bangpa-Bridging-Header.h";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -737,7 +737,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.adhoc.Bangpa;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "/Users/dongkun/Programming/ADHOC/Bangpa/Bangpa/Bangpa-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "$(PROJECT_DIR)/Bangpa/Bangpa-Bridging-Header.h";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
