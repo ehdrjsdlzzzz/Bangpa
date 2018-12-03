@@ -2,8 +2,8 @@
 //  StudyGroupSetFilterViewController.swift
 //  Bangpa
 //
-//  Created by RAK on 2018. 8. 21..
-//  Copyright © 2018년 이동건. All rights reserved.
+//  Created by 이동건 on 03/12/2018.
+//  Copyright © 2018 이동건. All rights reserved.
 //
 
 import UIKit
@@ -11,16 +11,38 @@ import UIKit
 class StudyGroupSetFilterViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     @IBOutlet weak var tableView: UITableView!
     
+    var segueIdentifier: String?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.delegate = self
         tableView.dataSource = self
         tableView.allowsSelection = false
-        self.tabBarController?.tabBar.layer.isHidden = true
+        
         self.navigationItem.title = "게시물 필터설정"
         self.modalPresentationStyle = .overCurrentContext
+        
+        print(segueIdentifier)
+        
+        setupBarButtons()
     }
-
+    
+    
+    fileprivate func setupBarButtons() {
+        if segueIdentifier == "showFilter" {
+            let resetButton: UIButton = UIButton(frame: CGRect(x: 0, y: 0, width: 68, height: 32))
+            resetButton.setTitle("초기화", for: .normal)
+            resetButton.setTitleColor(UIColor.darkGray, for: .normal)
+            resetButton.backgroundColor = UIColor.white
+            let resetBarButtonItem = UIBarButtonItem(customView: resetButton)
+            self.navigationItem.rightBarButtonItem = resetBarButtonItem
+        }
+    }
+    
+    @objc func handleSetting() {
+        print("Setting")
+    }
+    
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         switch indexPath.section {
@@ -29,7 +51,7 @@ class StudyGroupSetFilterViewController: UIViewController, UITableViewDelegate, 
         case 1:
             return 175
         case 2:
-            return 150
+            return 125
         case 3:
             return 300
         default:
@@ -40,10 +62,13 @@ class StudyGroupSetFilterViewController: UIViewController, UITableViewDelegate, 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         switch indexPath.section {
         case 0:
-            let cell = tableView.dequeueReusableCell(withIdentifier: "studyRegionCell", for: indexPath)
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: "studyRegionCell", for: indexPath) as? StudyRegionTableViewCell else { return UITableViewCell()}
             return cell
         case 1:
             let cell = tableView.dequeueReusableCell(withIdentifier: "studyDayCell", for: indexPath)
+            return cell
+        case 2:
+            let cell = tableView.dequeueReusableCell(withIdentifier: "studyNumberCell", for: indexPath)
             return cell
         default:
             let cell = tableView.dequeueReusableCell(withIdentifier: "memberJobCell", for: indexPath)
@@ -59,22 +84,11 @@ class StudyGroupSetFilterViewController: UIViewController, UITableViewDelegate, 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 1
     }
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-    
     
 }
 
 @IBDesignable extension UIButton {
-
+    
     @IBInspectable var borderWidth: CGFloat {
         set {
             layer.borderWidth = newValue
@@ -92,7 +106,7 @@ class StudyGroupSetFilterViewController: UIViewController, UITableViewDelegate, 
             return layer.cornerRadius
         }
     }
-
+    
     @IBInspectable var borderColor: UIColor? {
         set {
             guard let uiColor = newValue else { return }

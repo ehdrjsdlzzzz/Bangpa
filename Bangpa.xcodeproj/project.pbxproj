@@ -34,8 +34,6 @@
 		3ED5CDE821109B9E00E8DF6B /* MainViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3ED5CDE721109B9E00E8DF6B /* MainViewController.storyboard */; };
 		3ED5CDEA21109BCA00E8DF6B /* SearchStudyRoomViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3ED5CDE921109BCA00E8DF6B /* SearchStudyRoomViewController.storyboard */; };
 		3ED5CDEC21109BD500E8DF6B /* SearchStudyRoomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ED5CDEB21109BD500E8DF6B /* SearchStudyRoomViewController.swift */; };
-		3ED5CDEE21109BFD00E8DF6B /* SearchStudyGroupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ED5CDED21109BFD00E8DF6B /* SearchStudyGroupViewController.swift */; };
-		3ED5CDF021109C0400E8DF6B /* SearchStudyGroupViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3ED5CDEF21109C0400E8DF6B /* SearchStudyGroupViewController.storyboard */; };
 		3ED5CDF221109C2200E8DF6B /* MyPageViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3ED5CDF121109C2200E8DF6B /* MyPageViewController.storyboard */; };
 		3ED5CDF421109C2B00E8DF6B /* MyPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ED5CDF321109C2B00E8DF6B /* MyPageViewController.swift */; };
 		3ED5CDF82110A1E100E8DF6B /* MainVCPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ED5CDF72110A1E100E8DF6B /* MainVCPresenter.swift */; };
@@ -44,6 +42,18 @@
 		3ED5CE002110AFAB00E8DF6B /* MainPromotionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ED5CDFF2110AFAB00E8DF6B /* MainPromotionTableViewCell.swift */; };
 		3ED5CE022110B08800E8DF6B /* ReusableIdentifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ED5CE012110B08800E8DF6B /* ReusableIdentifier.swift */; };
 		3ED5CE042110B78E00E8DF6B /* MainViewAdvertisementCollectionViewPersenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ED5CE032110B78E00E8DF6B /* MainViewAdvertisementCollectionViewPersenter.swift */; };
+		3EE5616321B4FA8D00A78650 /* SearchStudyGroupViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3EE5616221B4FA8C00A78650 /* SearchStudyGroupViewController.storyboard */; };
+		3EE5616521B4FAB600A78650 /* SearchStudyGroupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EE5616421B4FAB600A78650 /* SearchStudyGroupViewController.swift */; };
+		3EE5616721B4FABF00A78650 /* SearchStudyGroupPostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EE5616621B4FABE00A78650 /* SearchStudyGroupPostViewController.swift */; };
+		3EE5616921B4FAC600A78650 /* SearchStudyGroupWritePostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EE5616821B4FAC600A78650 /* SearchStudyGroupWritePostViewController.swift */; };
+		3EE5616B21B4FAD500A78650 /* RecruitPost.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EE5616A21B4FAD500A78650 /* RecruitPost.swift */; };
+		3EE5616E21B4FAF800A78650 /* LineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EE5616D21B4FAF800A78650 /* LineView.swift */; };
+		3EE5617021B4FB0100A78650 /* CheckBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EE5616F21B4FB0100A78650 /* CheckBox.swift */; };
+		3EE5617221B4FB5600A78650 /* StudyGroupSetFilterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EE5617121B4FB5600A78650 /* StudyGroupSetFilterViewController.swift */; };
+		3EE5617421B4FB7900A78650 /* StudyRegionSelectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EE5617321B4FB7900A78650 /* StudyRegionSelectViewController.swift */; };
+		3EE5617721B4FBDE00A78650 /* RecruitPostTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EE5617621B4FBDE00A78650 /* RecruitPostTableViewCell.swift */; };
+		3EE5617921B4FBEA00A78650 /* StudyRegionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EE5617821B4FBEA00A78650 /* StudyRegionTableViewCell.swift */; };
+		3EE5617B21B4FBFA00A78650 /* RegionCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EE5617A21B4FBFA00A78650 /* RegionCollectionViewCell.swift */; };
 		72BC6A1E213FC477BB74CD27 /* Pods_Bangpa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AEA4EF4C5736A0772F7E80C5 /* Pods_Bangpa.framework */; };
 /* End PBXBuildFile section */
 
@@ -91,8 +101,6 @@
 		3ED5CDE721109B9E00E8DF6B /* MainViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MainViewController.storyboard; sourceTree = "<group>"; };
 		3ED5CDE921109BCA00E8DF6B /* SearchStudyRoomViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SearchStudyRoomViewController.storyboard; sourceTree = "<group>"; };
 		3ED5CDEB21109BD500E8DF6B /* SearchStudyRoomViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchStudyRoomViewController.swift; sourceTree = "<group>"; };
-		3ED5CDED21109BFD00E8DF6B /* SearchStudyGroupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchStudyGroupViewController.swift; sourceTree = "<group>"; };
-		3ED5CDEF21109C0400E8DF6B /* SearchStudyGroupViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SearchStudyGroupViewController.storyboard; sourceTree = "<group>"; };
 		3ED5CDF121109C2200E8DF6B /* MyPageViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MyPageViewController.storyboard; sourceTree = "<group>"; };
 		3ED5CDF321109C2B00E8DF6B /* MyPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageViewController.swift; sourceTree = "<group>"; };
 		3ED5CDF72110A1E100E8DF6B /* MainVCPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVCPresenter.swift; sourceTree = "<group>"; };
@@ -101,6 +109,18 @@
 		3ED5CDFF2110AFAB00E8DF6B /* MainPromotionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPromotionTableViewCell.swift; sourceTree = "<group>"; };
 		3ED5CE012110B08800E8DF6B /* ReusableIdentifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReusableIdentifier.swift; sourceTree = "<group>"; };
 		3ED5CE032110B78E00E8DF6B /* MainViewAdvertisementCollectionViewPersenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewAdvertisementCollectionViewPersenter.swift; sourceTree = "<group>"; };
+		3EE5616221B4FA8C00A78650 /* SearchStudyGroupViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = SearchStudyGroupViewController.storyboard; sourceTree = "<group>"; };
+		3EE5616421B4FAB600A78650 /* SearchStudyGroupViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchStudyGroupViewController.swift; sourceTree = "<group>"; };
+		3EE5616621B4FABE00A78650 /* SearchStudyGroupPostViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchStudyGroupPostViewController.swift; sourceTree = "<group>"; };
+		3EE5616821B4FAC600A78650 /* SearchStudyGroupWritePostViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchStudyGroupWritePostViewController.swift; sourceTree = "<group>"; };
+		3EE5616A21B4FAD500A78650 /* RecruitPost.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecruitPost.swift; sourceTree = "<group>"; };
+		3EE5616D21B4FAF800A78650 /* LineView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LineView.swift; sourceTree = "<group>"; };
+		3EE5616F21B4FB0100A78650 /* CheckBox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckBox.swift; sourceTree = "<group>"; };
+		3EE5617121B4FB5600A78650 /* StudyGroupSetFilterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudyGroupSetFilterViewController.swift; sourceTree = "<group>"; };
+		3EE5617321B4FB7900A78650 /* StudyRegionSelectViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudyRegionSelectViewController.swift; sourceTree = "<group>"; };
+		3EE5617621B4FBDE00A78650 /* RecruitPostTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = RecruitPostTableViewCell.swift; path = Bangpa/ViewControllers/RecruitPostTableViewCell.swift; sourceTree = SOURCE_ROOT; };
+		3EE5617821B4FBEA00A78650 /* StudyRegionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = StudyRegionTableViewCell.swift; path = Bangpa/ViewControllers/StudyRegionTableViewCell.swift; sourceTree = SOURCE_ROOT; };
+		3EE5617A21B4FBFA00A78650 /* RegionCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = RegionCollectionViewCell.swift; path = Bangpa/ViewControllers/RegionCollectionViewCell.swift; sourceTree = SOURCE_ROOT; };
 		AEA4EF4C5736A0772F7E80C5 /* Pods_Bangpa.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Bangpa.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B4A77653603DB72FE9FEA2C2 /* Pods-Bangpa.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bangpa.release.xcconfig"; path = "Pods/Target Support Files/Pods-Bangpa/Pods-Bangpa.release.xcconfig"; sourceTree = "<group>"; };
 		F133BDE31E2615661711FE71 /* Pods-Bangpa.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bangpa.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Bangpa/Pods-Bangpa.debug.xcconfig"; sourceTree = "<group>"; };
@@ -133,6 +153,7 @@
 		3E0E9B1521301EE400B3956F /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				3EE5616A21B4FAD500A78650 /* RecruitPost.swift */,
 				3E0E9B1621301EF700B3956F /* MapSearchResult.swift */,
 			);
 			path = Model;
@@ -197,6 +218,7 @@
 		3ED5CDBD211088C200E8DF6B /* Bangpa */ = {
 			isa = PBXGroup;
 			children = (
+				3EE5616C21B4FAE300A78650 /* Views */,
 				3E91414B21AC6B8800746E43 /* Constants */,
 				3E0E9B1821301FD700B3956F /* Service */,
 				3E0E9B1521301EE400B3956F /* Model */,
@@ -223,10 +245,14 @@
 			children = (
 				3ED5CDE521109B9500E8DF6B /* MainViewController.swift */,
 				3ED5CDEB21109BD500E8DF6B /* SearchStudyRoomViewController.swift */,
-				3ED5CDED21109BFD00E8DF6B /* SearchStudyGroupViewController.swift */,
+				3EE5616421B4FAB600A78650 /* SearchStudyGroupViewController.swift */,
+				3EE5616621B4FABE00A78650 /* SearchStudyGroupPostViewController.swift */,
+				3EE5616821B4FAC600A78650 /* SearchStudyGroupWritePostViewController.swift */,
 				3ED5CDF321109C2B00E8DF6B /* MyPageViewController.swift */,
 				3E5533BE212A4F0000288AEE /* MapViewController.swift */,
 				3E91414E21AC6E9C00746E43 /* AdditionalInfoViewController.swift */,
+				3EE5617121B4FB5600A78650 /* StudyGroupSetFilterViewController.swift */,
+				3EE5617321B4FB7900A78650 /* StudyRegionSelectViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -236,8 +262,8 @@
 			children = (
 				3ED5CDE721109B9E00E8DF6B /* MainViewController.storyboard */,
 				3ED5CDE921109BCA00E8DF6B /* SearchStudyRoomViewController.storyboard */,
-				3ED5CDEF21109C0400E8DF6B /* SearchStudyGroupViewController.storyboard */,
 				3ED5CDF121109C2200E8DF6B /* MyPageViewController.storyboard */,
+				3EE5616221B4FA8C00A78650 /* SearchStudyGroupViewController.storyboard */,
 				3E91415021AC6EAA00746E43 /* AdditionalInfoViewController.storyboard */,
 				3E5533C0212A4F0900288AEE /* MapViewController.storyboard */,
 			);
@@ -267,9 +293,30 @@
 		3ED5CDFC2110AE9A00E8DF6B /* Cells */ = {
 			isa = PBXGroup;
 			children = (
+				3EE5617521B4FBA700A78650 /* SearchStudyGroupViewController */,
 				3EC4FBC4212984CA00E19A54 /* MainViewController */,
 			);
 			path = Cells;
+			sourceTree = "<group>";
+		};
+		3EE5616C21B4FAE300A78650 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				3EE5616D21B4FAF800A78650 /* LineView.swift */,
+				3EE5616F21B4FB0100A78650 /* CheckBox.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		3EE5617521B4FBA700A78650 /* SearchStudyGroupViewController */ = {
+			isa = PBXGroup;
+			children = (
+				3EE5617621B4FBDE00A78650 /* RecruitPostTableViewCell.swift */,
+				3EE5617821B4FBEA00A78650 /* StudyRegionTableViewCell.swift */,
+				3EE5617A21B4FBFA00A78650 /* RegionCollectionViewCell.swift */,
+			);
+			name = SearchStudyGroupViewController;
+			path = "New Group";
 			sourceTree = "<group>";
 		};
 		FFA40D263ABA83B3E83AB0A5 /* Frameworks */ = {
@@ -347,8 +394,8 @@
 			files = (
 				3EC4FBCA2129880A00E19A54 /* SectionDescriptionTableViewCell.xib in Resources */,
 				3ED5CDE821109B9E00E8DF6B /* MainViewController.storyboard in Resources */,
-				3ED5CDF021109C0400E8DF6B /* SearchStudyGroupViewController.storyboard in Resources */,
 				3ED5CDC9211088C300E8DF6B /* LaunchScreen.storyboard in Resources */,
+				3EE5616321B4FA8D00A78650 /* SearchStudyGroupViewController.storyboard in Resources */,
 				3E91415121AC6EAA00746E43 /* AdditionalInfoViewController.storyboard in Resources */,
 				3ED5CDC6211088C300E8DF6B /* Assets.xcassets in Resources */,
 				3E5533C1212A4F0900288AEE /* MapViewController.storyboard in Resources */,
@@ -451,24 +498,34 @@
 			buildActionMask = 2147483647;
 			files = (
 				3EC4FBC92129880A00E19A54 /* SectionDescriptionTableViewCell.swift in Sources */,
+				3EE5616721B4FABF00A78650 /* SearchStudyGroupPostViewController.swift in Sources */,
 				3E0E9B1A21301FF200B3956F /* APIService.swift in Sources */,
 				3ED5CE002110AFAB00E8DF6B /* MainPromotionTableViewCell.swift in Sources */,
+				3EE5617B21B4FBFA00A78650 /* RegionCollectionViewCell.swift in Sources */,
+				3EE5616E21B4FAF800A78650 /* LineView.swift in Sources */,
 				3E91414F21AC6E9C00746E43 /* AdditionalInfoViewController.swift in Sources */,
 				3EC4FBCC212990D800E19A54 /* StudyGroupTableViewCell.swift in Sources */,
 				3ED5CDF82110A1E100E8DF6B /* MainVCPresenter.swift in Sources */,
 				3EC4FBE3212A5D5100E19A54 /* NMapViewResources.swift in Sources */,
 				3ED5CDF421109C2B00E8DF6B /* MyPageViewController.swift in Sources */,
 				3ED5CDBF211088C200E8DF6B /* AppDelegate.swift in Sources */,
+				3EE5617021B4FB0100A78650 /* CheckBox.swift in Sources */,
+				3EE5616B21B4FAD500A78650 /* RecruitPost.swift in Sources */,
 				3E0E9B1E21303C6500B3956F /* GeoTransitionService.swift in Sources */,
 				3ED5CDEC21109BD500E8DF6B /* SearchStudyRoomViewController.swift in Sources */,
-				3ED5CDEE21109BFD00E8DF6B /* SearchStudyGroupViewController.swift in Sources */,
 				3E91414D21AC6B9D00746E43 /* Constants.swift in Sources */,
+				3EE5617921B4FBEA00A78650 /* StudyRegionTableViewCell.swift in Sources */,
 				3E0E9B1721301EF700B3956F /* MapSearchResult.swift in Sources */,
+				3EE5617421B4FB7900A78650 /* StudyRegionSelectViewController.swift in Sources */,
 				3ED5CDFB2110ABA100E8DF6B /* ThemeColor.swift in Sources */,
 				3ED5CDFE2110AEDD00E8DF6B /* MainPromotionCollectionViewCell.swift in Sources */,
 				3E04E813212C601700F7EA41 /* MapVCPresenter.swift in Sources */,
+				3EE5616521B4FAB600A78650 /* SearchStudyGroupViewController.swift in Sources */,
+				3EE5617221B4FB5600A78650 /* StudyGroupSetFilterViewController.swift in Sources */,
 				3ED5CDE621109B9500E8DF6B /* MainViewController.swift in Sources */,
 				3ED5CE022110B08800E8DF6B /* ReusableIdentifier.swift in Sources */,
+				3EE5616921B4FAC600A78650 /* SearchStudyGroupWritePostViewController.swift in Sources */,
+				3EE5617721B4FBDE00A78650 /* RecruitPostTableViewCell.swift in Sources */,
 				3ED5CE042110B78E00E8DF6B /* MainViewAdvertisementCollectionViewPersenter.swift in Sources */,
 				3E5533BF212A4F0000288AEE /* MapViewController.swift in Sources */,
 				3EC4FBCE2129AD9F00E19A54 /* GradientExtensions.swift in Sources */,
