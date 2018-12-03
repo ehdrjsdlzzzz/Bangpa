@@ -315,8 +315,7 @@
 				3EE5617821B4FBEA00A78650 /* StudyRegionTableViewCell.swift */,
 				3EE5617A21B4FBFA00A78650 /* RegionCollectionViewCell.swift */,
 			);
-			name = SearchStudyGroupViewController;
-			path = "New Group";
+			path = SearchStudyGroupViewController;
 			sourceTree = "<group>";
 		};
 		FFA40D263ABA83B3E83AB0A5 /* Frameworks */ = {
