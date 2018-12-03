@@ -15,7 +15,7 @@ class RecruitPostTableViewCell: UITableViewCell {
     @IBOutlet weak var postWriterLabel: UILabel!
     @IBOutlet weak var elapsedTimeLabel: UILabel!
     @IBOutlet weak var bookMarkButton: UIButton!
-    
+    @IBOutlet weak var hashtagStackView: UIStackView!
     
     var isCheckedBookMark = false
     @IBAction func bookMarkButtonTapped(_ sender: Any) {
@@ -36,8 +36,25 @@ class RecruitPostTableViewCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         setUpViews()
+        
+        hashtagStackView.addArrangedSubview(generateHashtagButton(with: "#swift"))
+        hashtagStackView.addArrangedSubview(generateHashtagButton(with: "#iOS"))
+        
         //        contentView.frame = UIEdgeInsetsInsetRect(contentView.frame, UIEdgeInsets(top: 0, left: 16, bottom: 0, right: 16))
         // Initialization code
+    }
+    
+    private func generateHashtagButton(with text: String) -> UIButton {
+        let button = UIButton()
+        button.accessibilityTraits = UIAccessibilityTraits.staticText
+        button.titleLabel?.font = UIFont.systemFont(ofSize: 12)
+        button.layer.cornerRadius = 10
+        button.isUserInteractionEnabled = false
+        button.backgroundColor = UIColor.lightGray
+        button.setTitleColor(.white, for: .normal)
+        button.setTitle(text, for: .normal)
+        button.contentEdgeInsets = UIEdgeInsets(top: 0, left: 7, bottom: 0, right: 7)
+        return button
     }
     
     override func prepareForReuse() {

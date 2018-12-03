@@ -26,7 +26,6 @@ class SearchStudyGroupPostViewController: UIViewController, UITableViewDelegate,
         settingViews()
         
         self.navigationItem.title = " "
-        self.tabBarController?.tabBar.layer.isHidden = true
         
         self.tableView.delegate = self
         self.tableView.dataSource = self
@@ -75,10 +74,6 @@ class SearchStudyGroupPostViewController: UIViewController, UITableViewDelegate,
         
     }
     
-//    override func viewWillDisappear(_ animated: Bool) {
-//        super.viewWillDisappear(true)
-//        self.tabBarController?.tabBar.layer.isHidden = false
-//    }
     /*
     // MARK: - Navigation
 
