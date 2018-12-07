@@ -22,9 +22,19 @@ class SearchStudyGroupWritePostViewController: UIViewController {
     }
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        setUpNavigationBar()
     }
-
+    
+    func setUpNavigationBar() {
+        let navigationDeleteButton = UIButton(frame: CGRect(x: 0, y: 0, width: 30, height: 30))
+        navigationDeleteButton.setBackgroundImage(UIImage(named: "Delete"), for: .normal)
+        navigationDeleteButton.addTarget(self, action: #selector(deleteButtonDidTapped), for: .touchUpInside)
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem(customView: navigationDeleteButton)
+    }
+    
+    @objc func deleteButtonDidTapped() {
+        print("send delete message")
+    }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
