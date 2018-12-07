@@ -10,7 +10,11 @@ import UIKit
 
 class ButtonCell: UITableViewCell {
     
-    @IBOutlet weak var button: UIButton!
+    @IBOutlet weak var button: UIButton! {
+        didSet {
+            button.layer.cornerRadius = 5
+        }
+    }
     var buttonDidTapped: ((UIButton)->Void)?
     
     override func awakeFromNib() {

@@ -25,9 +25,13 @@ class AdditionalInfoViewController: UIViewController {
     func setupData() {
         guard let email = userInfo?["email"] else { return }
         guard let name = userInfo?["name"] else { return }
+        guard let provider = userInfo?["provider"] else { return }
         
         data["email"] = email
-        data["nick"] = "최성흠"
+        data["nick"] = name
+        data["provider"] = provider
+        
+        self.tableView.reloadData()
     }
     
     func setupTableView() {
@@ -54,6 +58,11 @@ extension AdditionalInfoViewController: UITableViewDataSource {
         if indexPath.section == 0 {
             let cell = tableView.dequeueReusableCell(withIdentifier: TextFieldCell.reusableIdentifier) as! TextFieldCell
             cell.textField.placeholder = placeholders[indexPath.row]
+            if indexPath.row == 0 {
+                cell.textField.text = userInfo?["email"]
+            }else if indexPath.row == 1 {
+                cell.textField.text = userInfo?["name"]
+            }
             return cell
         }
         // Button Cell
@@ -61,12 +70,10 @@ extension AdditionalInfoViewController: UITableViewDataSource {
         cell.setupButton(title: "완료")
         cell.buttonDidTapped = { (button) in
             guard let url = URL(string: "http://192.168.0.89:8002/v1/auth/join") else { return }
+            
             self.data["job"] = "Student"
-            self.data["provider"] = "naver"
-            self.data["password"] = "123123"
+            self.data["password"] = ""
             self.data["snsId"] = "manu06244"
-            
-            
             
             Alamofire.request(url, method: .post, parameters: self.data, encoding: JSONEncoding.default, headers: nil).responseJSON(completionHandler: { (response) in
                 
@@ -75,6 +82,8 @@ extension AdditionalInfoViewController: UITableViewDataSource {
                     return
                 }
                 
+                NotificationCenter.default.post(name: MyPageViewController.notification, object: nil)
+                self.dismiss(animated: true, completion: nil)
             })
         }
         return cell

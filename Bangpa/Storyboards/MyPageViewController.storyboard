@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="rao-qX-wK2">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ewW-CK-HBu">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -10,107 +10,20 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--My Page View Controller-->
-        <scene sceneID="sol-u6-NFx">
+        <!--My Page-->
+        <scene sceneID="fWS-LB-t3I">
             <objects>
-                <viewController storyboardIdentifier="MyPageViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="rao-qX-wK2" customClass="MyPageViewController" customModule="Bangpa" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="Jlv-g2-JBf">
+                <viewController storyboardIdentifier="MyPageViewController" title="My Page" useStoryboardIdentifierAsRestorationIdentifier="YES" id="ewW-CK-HBu" customClass="MyPageViewController" customModule="Bangpa" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="FPQ-4J-nQD">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gSL-ov-nN8" customClass="GIDSignInButton">
-                                <rect key="frame" x="10" y="607" width="355" height="50"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="kx1-lS-47d"/>
-                                </constraints>
-                            </view>
-                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TAx-mi-Tl9">
-                                <rect key="frame" x="10" y="547" width="355" height="50"/>
-                                <color key="backgroundColor" red="0.0" green="0.56284224989999998" blue="0.31881666180000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="N00-M1-dNh"/>
-                                </constraints>
-                                <state key="normal" title="네이버 아이디로 로그인">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                                <connections>
-                                    <action selector="handleNaverSignIn:" destination="rao-qX-wK2" eventType="touchUpInside" id="hPA-3N-TDC"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Oh-eD-2wL" customClass="KOLoginButton">
-                                <rect key="frame" x="10" y="487" width="355" height="50"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="fLG-lZ-c8r"/>
-                                </constraints>
-                                <color key="tintColor" red="0.28235294117647058" green="0.20000000000000001" blue="0.20392156862745098" alpha="1" colorSpace="calibratedRGB"/>
-                                <state key="normal">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                                <connections>
-                                    <action selector="handleKakaoSignIn:" destination="rao-qX-wK2" eventType="touchUpInside" id="LjU-z4-YaI"/>
-                                </connections>
-                            </button>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="bFd-4I-7ce">
-                                <rect key="frame" x="123" y="142" width="110" height="200"/>
-                                <subviews>
-                                    <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="JmG-a8-WDe">
-                                        <rect key="frame" x="123" y="90" width="97" height="30"/>
-                                        <nil key="textColor"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
-                                    </textField>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="F4y-tY-ubK">
-                                        <rect key="frame" x="6" y="85" width="97" height="30"/>
-                                        <nil key="textColor"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
-                                    </textField>
-                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vKE-7M-tTP">
-                                        <rect key="frame" x="37" y="88" width="39" height="30"/>
-                                        <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                        <state key="normal" title="로그인">
-                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        </state>
-                                    </button>
-                                </subviews>
-                            </stackView>
-                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <constraints>
-                            <constraint firstItem="bFd-4I-7ce" firstAttribute="leading" secondItem="oki-j3-Kqa" secondAttribute="leading" constant="40" id="5GD-Sx-BGV"/>
-                            <constraint firstItem="3Oh-eD-2wL" firstAttribute="leading" secondItem="oki-j3-Kqa" secondAttribute="leading" constant="10" id="8HX-6e-kW2"/>
-                            <constraint firstItem="TAx-mi-Tl9" firstAttribute="leading" secondItem="oki-j3-Kqa" secondAttribute="leading" constant="10" id="JGP-O9-PY9"/>
-                            <constraint firstItem="oki-j3-Kqa" firstAttribute="trailing" secondItem="TAx-mi-Tl9" secondAttribute="trailing" constant="10" id="NLD-Wr-N6L"/>
-                            <constraint firstItem="TAx-mi-Tl9" firstAttribute="top" secondItem="3Oh-eD-2wL" secondAttribute="bottom" constant="10" id="PSV-cl-J9i"/>
-                            <constraint firstItem="gSL-ov-nN8" firstAttribute="top" secondItem="TAx-mi-Tl9" secondAttribute="bottom" constant="10" id="Qai-wr-Hb5"/>
-                            <constraint firstItem="oki-j3-Kqa" firstAttribute="trailing" secondItem="bFd-4I-7ce" secondAttribute="trailing" constant="40" id="SQ6-5L-gec"/>
-                            <constraint firstItem="gSL-ov-nN8" firstAttribute="leading" secondItem="oki-j3-Kqa" secondAttribute="leading" constant="10" id="ZZ0-Oh-Doh"/>
-                            <constraint firstItem="bFd-4I-7ce" firstAttribute="top" secondItem="oki-j3-Kqa" secondAttribute="top" constant="40" id="aQC-i7-y8o"/>
-                            <constraint firstItem="oki-j3-Kqa" firstAttribute="trailing" secondItem="3Oh-eD-2wL" secondAttribute="trailing" constant="10" id="cck-Xw-tq2"/>
-                            <constraint firstItem="oki-j3-Kqa" firstAttribute="bottom" secondItem="gSL-ov-nN8" secondAttribute="bottom" constant="10" id="e6T-Up-Kuf"/>
-                            <constraint firstItem="oki-j3-Kqa" firstAttribute="trailing" secondItem="gSL-ov-nN8" secondAttribute="trailing" constant="10" id="rhs-21-hXk"/>
-                        </constraints>
-                        <viewLayoutGuide key="safeArea" id="oki-j3-Kqa"/>
+                        <viewLayoutGuide key="safeArea" id="p4n-Rq-ckb"/>
                     </view>
-                    <connections>
-                        <outlet property="googleSignInButton" destination="gSL-ov-nN8" id="Q75-NJ-xEa"/>
-                        <outlet property="kakoSignInButton" destination="3Oh-eD-2wL" id="JKW-76-UWM"/>
-                        <segue destination="cdo-E9-VHe" kind="show" identifier="signInSuccess" id="ZPM-Ag-CeZ"/>
-                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="o0W-6K-9Mv" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yox-Dq-yud" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="893.60000000000002" y="121.88905547226388"/>
-        </scene>
-        <!--AdditionalInfoViewController-->
-        <scene sceneID="QCv-C9-wec">
-            <objects>
-                <viewControllerPlaceholder storyboardName="AdditionalInfoViewController" referencedIdentifier="AdditionalInfoViewController" id="cdo-E9-VHe" sceneMemberID="viewController"/>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="jh5-pS-bXu" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1684" y="121"/>
+            <point key="canvasLocation" x="291" y="41"/>
         </scene>
     </scenes>
 </document>
