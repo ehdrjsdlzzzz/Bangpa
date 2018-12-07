@@ -17,25 +17,38 @@ class SearchStudyGroupPostViewController: UIViewController, UITableViewDelegate,
 
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var postWriterLabel: UILabel!
-    
+    @IBOutlet weak var hashtagStackView: UIStackView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         setUpNavigationBar()
         settingViews()
+        hashtagStackView.addArrangedSubview(generateHashtagButton(with: "#iOS"))
+        hashtagStackView.addArrangedSubview(generateHashtagButton(with: "#swift"))
         
         self.navigationItem.title = " "
-        self.tabBarController?.tabBar.layer.isHidden = true
         
         self.tableView.delegate = self
         self.tableView.dataSource = self
         self.tableView.separatorStyle = .none
     }
     
+    
+    private func generateHashtagButton(with text: String) -> UIButton {
+        let button = UIButton()
+        button.accessibilityTraits = UIAccessibilityTraits.staticText
+        button.titleLabel?.font = UIFont.systemFont(ofSize: 12)
+        button.layer.cornerRadius = 10
+        button.isUserInteractionEnabled = false
+        button.backgroundColor = UIColor.lightGray
+        button.setTitleColor(.white, for: .normal)
+        button.setTitle(text, for: .normal)
+        button.contentEdgeInsets = UIEdgeInsets(top: 0, left: 7, bottom: 0, right: 7)
+        return button
+    }
+    
     func setUpNavigationBar() {
-//        self.navigationItem.title = nil
-        
         let navigationSettingButton = UIButton(frame: CGRect(x: 0, y: 0, width: 30, height: 30))
         navigationSettingButton.setBackgroundImage(UIImage(named: "Setting"), for: .normal)
         //
@@ -75,10 +88,6 @@ class SearchStudyGroupPostViewController: UIViewController, UITableViewDelegate,
         
     }
     
-//    override func viewWillDisappear(_ animated: Bool) {
-//        super.viewWillDisappear(true)
-//        self.tabBarController?.tabBar.layer.isHidden = false
-//    }
     /*
     // MARK: - Navigation
 

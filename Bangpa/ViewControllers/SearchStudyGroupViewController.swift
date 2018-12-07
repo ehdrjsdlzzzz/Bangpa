@@ -13,7 +13,6 @@ class SearchStudyGroupViewController: UIViewController, UITableViewDataSource, U
     @IBOutlet weak var tableView: UITableView!
 
     @IBOutlet weak var bookMarkFilterButton: UIButton!
-    
     let postCellIdentifier = "postCell"
     
     var recruitPosts: [RecruitPost] = [
@@ -169,12 +168,13 @@ class SearchStudyGroupViewController: UIViewController, UITableViewDataSource, U
 
         if segue.identifier == "showFilter" {
             let vc = segue.destination as! StudyGroupSetFilterViewController
-            vc.hidesBottomBarWhenPushed = true
             vc.segueIdentifier = "showFilter"
+            vc.hidesBottomBarWhenPushed = true
         } else {
             guard let indexPath = tableView.indexPathForSelectedRow else { return }
             let vc = segue.destination as! SearchStudyGroupPostViewController
             vc.recruitPost = recruitPosts[indexPath.row]
+            vc.hidesBottomBarWhenPushed = true
         }
         
         let backItem = UIBarButtonItem()
