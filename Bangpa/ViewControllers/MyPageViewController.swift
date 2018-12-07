@@ -15,7 +15,6 @@ import Alamofire
 class MyPageViewController: UIViewController, GIDSignInUIDelegate {
     @IBOutlet weak var kakoSignInButton: KOLoginButton!
     private let loginInstance = NaverThirdPartyLoginConnection.getSharedInstance()
-    @IBOutlet weak var idLabel: UILabel!
     @IBOutlet weak var googleSignInButton: GIDSignInButton! {
         didSet {
             googleSignInButton.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(handleGoogleSignIn)))
